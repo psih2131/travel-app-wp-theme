@@ -1,0 +1,166 @@
+/**
+ * Кастомные стили темы.
+ * Подключается последним и перезаписывает остальные при необходимости.
+ */
+
+/* Сообщения валидации в модалках (логин / регистрация) */
+.auth-form__message {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.auth-form__message.error {
+    background-color: #ffeaea;
+    color: #c53030;
+    border: 1px solid #f5b5b5;
+}
+
+/* Подсветка ошибок в полях формы регистрации — только после первого сабмита */
+#registr .js-registr-form.is-validated .auth-form__input:invalid {
+    border: 1px solid #c53030;
+    box-shadow: 0 0 0 1px rgba(197, 48, 48, 0.2);
+}
+
+#registr .js-registr-form.is-validated .auth-form__input:focus:invalid {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(197, 48, 48, 0.35);
+}
+
+#registr .js-registr-form.is-validated .auth-form__checkbox:invalid + span {
+    color: #c53030;
+}
+
+/* Форма смены пароля: общее сообщение и ошибки у полей */
+.user-profile-form-wrap .auth-form__message {
+    margin-bottom: 12px;
+}
+
+.user-profile-form-wrap .auth-form__message.error {
+    background-color: #ffeaea;
+    color: #c53030;
+    border: 1px solid #f5b5b5;
+}
+
+.user-profile-form-wrap .auth-form__message:not(.error):not([hidden]) {
+    background-color: #e6f7ed;
+    color: #1e7e34;
+    border: 1px solid #a3d9a5;
+}
+
+/* Кнопка удаления аватара: красный кружок с белым крестиком, видна при наведении */
+.user-profile-card__avatar-wrap {
+    position: relative;
+}
+.user-profile-card__avatar-delete {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #c53030;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.user-profile-card__avatar-delete:hover {
+    background-color: #9b2c2c;
+}
+.user-profile-card__avatar-wrap:hover .user-profile-card__avatar-delete {
+    opacity: 1;
+}
+.user-profile-card__avatar-delete svg {
+    display: block;
+}
+
+/* Логин под названием типа аккаунта */
+.user-profile-card__login {
+  margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #6b7280;
+}
+.user-profile-card__name{
+    margin-bottom: 10px;
+}
+
+/* Сообщение под аватаром (успех/ошибка загрузки) */
+.user-profile-card__avatar-wrap .auth-form__message--avatar {
+    margin-top: 8px;
+    width: 100%;
+}
+.user-profile-card__avatar-wrap .auth-form__message--avatar.error {
+    background-color: #ffeaea;
+    color: #c53030;
+    border: 1px solid #f5b5b5;
+}
+.user-profile-card__avatar-wrap .auth-form__message--avatar:not(.error):not([hidden]) {
+    background-color: #e6f7ed;
+    color: #1e7e34;
+    border: 1px solid #a3d9a5;
+}
+
+.user-profile-form__error {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #c53030;
+}
+
+.user-profile-form__error[hidden] {
+    display: none;
+}
+
+/* Подсветка поля при ошибке (форма смены пароля) */
+.js-change-password-form .auth-form__input:focus.user-profile-form__input--error,
+.user-profile-form__field.has-error .auth-form__input {
+    border-color: #c53030;
+    box-shadow: 0 0 0 1px rgba(197, 48, 48, 0.25);
+}
+
+/* Контент страниц «Мои заказы» и «Стать гидом» */
+.user-account__content {
+    flex: 1;
+    min-width: 0;
+}
+.user-account__title {
+    margin: 0 0 0.5em;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.user-account__placeholder {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Скрытый элемент (доступен для скриптов и скринридеров) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Кнопки рубрик в архиве туров */
+.tours-hero-sec__teg.tour-teg,
+.tour-teg {
+    border: none;
+}
+

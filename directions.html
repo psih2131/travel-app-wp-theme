@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psih Vite Template</title>
+  <script type="module" crossorigin src="./assets/js/main.CapW1aTa.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style/main.CVjGLukt.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container">
+                <a href="" class="header__logo">
+                    <img src="../src/img/header-logo-test-2.jpg" alt="" class="header__logo-img">
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/tours.html">Туры</a></li>
+                        <li><a href="/directions.html">Направлений</a></li>
+                        <li><a href="/guides.html">Гиды</a></li>
+                        <li><a href="/blog">Полезыне статьи</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__right">
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Поиск">
+                        <div class="header__search-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.7321 12.3182H12.9907L12.7279 12.065C13.8541 10.7518 14.436 8.96032 14.1169 7.05624C13.6758 4.44869 11.4984 2.36639 8.87055 2.04749C4.90061 1.55974 1.55948 4.89891 2.04751 8.86652C2.36661 11.4928 4.45012 13.6689 7.05921 14.1098C8.9644 14.4287 10.757 13.8471 12.0709 12.7216L12.3243 12.9842V13.7252L16.313 17.7116C16.6978 18.0961 17.3266 18.0961 17.7114 17.7116C18.0962 17.327 18.0962 16.6986 17.7114 16.314L13.7321 12.3182ZM8.10096 12.3182C5.76405 12.3182 3.87763 10.4329 3.87763 8.09739C3.87763 5.76184 5.76405 3.87653 8.10096 3.87653C10.4379 3.87653 12.3243 5.76184 12.3243 8.09739C12.3243 10.4329 10.4379 12.3182 8.10096 12.3182Z"
+                                    fill="#5DB8A6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="header__auth-btn" data-engram-button="auth">Войти</button>
+                    <a href="/user-home.html" class="header__user-data user-data-header">
+                        <img src="./assets/image/user1.CDEjALZz.webp" alt="User Avatar" class="header__user-data-avatar-img">
+                    </a>
+
+                    <div class="header__burger burger-menu-btn">
+                        <span class="burger-menu-btn__line"></span>
+                        <span class="burger-menu-btn__line"></span>
+                        <span class="burger-menu-btn__line"></span>     
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="header-mobile-menu">
+            <div class="container">
+                <div class="header__search">
+                    <input type="text" class="header__search-input" placeholder="Поиск">
+                    <div class="header__search-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.7321 12.3182H12.9907L12.7279 12.065C13.8541 10.7518 14.436 8.96032 14.1169 7.05624C13.6758 4.44869 11.4984 2.36639 8.87055 2.04749C4.90061 1.55974 1.55948 4.89891 2.04751 8.86652C2.36661 11.4928 4.45012 13.6689 7.05921 14.1098C8.9644 14.4287 10.757 13.8471 12.0709 12.7216L12.3243 12.9842V13.7252L16.313 17.7116C16.6978 18.0961 17.3266 18.0961 17.7114 17.7116C18.0962 17.327 18.0962 16.6986 17.7114 16.314L13.7321 12.3182ZM8.10096 12.3182C5.76405 12.3182 3.87763 10.4329 3.87763 8.09739C3.87763 5.76184 5.76405 3.87653 8.10096 3.87653C10.4379 3.87653 12.3243 5.76184 12.3243 8.09739C12.3243 10.4329 10.4379 12.3182 8.10096 12.3182Z"
+                                fill="#5DB8A6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <nav class="header-mobile-menu__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/tours.html">Туры</a></li>
+                        <li><a href="/directions.html">Направлений</a></li>
+                        <li><a href="/guides.html">Гиды</a></li>
+                        <li><a href="/blog">Полезыне статьи</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+<main class="main">
+
+    <section class="direction-page">
+        <div class="container">
+            <div class="bread-crumbs">
+                <a href="" class="bread-crumbs__link">
+                    Главная
+                    <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.4394 3.99908L0.969727 1.52941L2.03039 0.46875L5.56072 3.99908L2.03039 7.52941L0.969727 6.46875L3.4394 3.99908Z"
+                            fill="#202020" />
+                    </svg>
+                </a>
+            
+                <p class="bread-crumbs__current">Все туры</p>
+            </div>
+            <h1 class="tours-hero-sec__title">Список направлений России</h1>
+            <p class="tours-hero-sec__subtitle">Необычные туры от местных жителей</p>
+    
+            <div class="direction-page__wrapper">
+                <a href="" class="direction-card">
+                    <div class="direction-card__img-wrapper">
+                        <img src="./assets/image/dir-1.C1Ozobgs.jpg" alt="" class="direction-card__img">
+                    </div>
+                    <div class="direction-card__data">
+                        <p class="direction-card__name-location">Норвегия</p>
+                        <div class="direction-card__count">241 экскурсий</div>
+                    </div>
+                </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-2.CAw743nH.webp" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Камчатка</p>
+                            <div class="direction-card__count">89 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-3.BZml2eiK.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Италия</p>
+                            <div class="direction-card__count">124 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-5.DJ8SjQhy.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Тайланд</p>
+                            <div class="direction-card__count">54 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-6.Cjz7bpZz.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Исландия</p>
+                            <div class="direction-card__count">23 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-7.yJJ5feKL.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Канада</p>
+                            <div class="direction-card__count">76 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-8.D4eW1C_4.webp" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Карелия</p>
+                            <div class="direction-card__count">89 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-9.608IcsFv.webp" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Крым</p>
+                            <div class="direction-card__count">89 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-10.BtDqMwOc.webp" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Иордания</p>
+                            <div class="direction-card__count">124 экскурсий</div>
+                        </div>
+                    </a>    
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-11.CPOJsd1X.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Греция</p>
+                            <div class="direction-card__count">54 экскурсий</div>
+                        </div>
+                    </a>
+                    <a href="" class="direction-card">
+                        <div class="direction-card__img-wrapper">
+                            <img src="./assets/image/dir-1.C1Ozobgs.jpg" alt="" class="direction-card__img">
+                        </div>
+                        <div class="direction-card__data">
+                            <p class="direction-card__name-location">Норвегия</p>
+                            <div class="direction-card__count">241 экскурсий</div>
+                        </div>
+                    </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-2.CAw743nH.webp" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Камчатка</p>
+                                <div class="direction-card__count">89 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-3.BZml2eiK.jpg" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Италия</p>
+                                <div class="direction-card__count">124 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-5.DJ8SjQhy.jpg" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Тайланд</p>
+                                <div class="direction-card__count">54 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-6.Cjz7bpZz.jpg" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Исландия</p>
+                                <div class="direction-card__count">23 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-7.yJJ5feKL.jpg" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Канада</p>
+                                <div class="direction-card__count">76 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-8.D4eW1C_4.webp" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Карелия</p>
+                                <div class="direction-card__count">89 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-9.608IcsFv.webp" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Крым</p>
+                                <div class="direction-card__count">89 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-10.BtDqMwOc.webp" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Иордания</p>
+                                <div class="direction-card__count">124 экскурсий</div>
+                            </div>
+                        </a>        
+                        <a href="" class="direction-card">
+                            <div class="direction-card__img-wrapper">
+                                <img src="./assets/image/dir-11.CPOJsd1X.jpg" alt="" class="direction-card__img">
+                            </div>
+                            <div class="direction-card__data">
+                                <p class="direction-card__name-location">Греция</p>
+                                <div class="direction-card__count">54 экскурсий</div>
+                            </div>
+                        </a>        </div>
+    
+        </div>
+    </section>
+    
+    
+    <section class="popular-tours-sec">
+        <div class="container">
+            <h2 class="popular-tours-sec__title">Популярные туры в России</h2>
+    
+            <div class="popular-tours-sec__wrapper">
+                <div class="tour-card">
+                    <div class="tour-card__top">
+                        <div class="tour-card__img-wrapper">
+                            <div class="tour-card__img-top-row">
+                                <div class="tour-card__tags-row">
+                                    <a href="" class="tour-card__tag">Авторский тур</a>
+                                    <a href="" class="tour-card__tag">Мини-группы</a>
+                                </div>
+                                <div class="tour-card__rate">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                            fill="#FDFFFE" />
+                                    </svg>
+                
+                                    <span class="tour-card__rate-num">4.8</span>
+                                </div>
+                            </div>
+                            <div class="tour-card__img-down-row">
+                                <div class="tour-card__period">2 дня</div>
+                            </div>
+                            <img src="./assets/image/tour1.AuwWnMIk.jpg" alt="" class="tour-card__img">
+                        </div>
+                
+                        <div class="tour-card__body">
+                            <p class="tour-card__title">
+                                <a href="/tour.html" class="tour-card__title-link">Забыть о делах: беззаботный отпуск на Пхукете в мини-группе </a>
+                            </p>
+                            <ul class="tour-card__date-list">
+                                <li class="tour-card__date">11-12 янв</li>
+                                <li class="tour-card__date">28 янв - 03 мар</li>
+                            </ul>
+                            <p class="tour-card__description">Полюбоваться каскадами рисовых террас, подняться к Вратам рая и узнать, как живут хмонги</p>
+                        </div>
+                    </div>
+                
+                    <div class="tour-card__down">
+                        <div class="tour-card__reserve-row">
+                            <div class="tour-card__price">
+                                $139 / <span>человек</span>
+                            </div>
+                
+                            <a href="/tour.html" class="tour-card__btn">
+                                Забронирывать
+                                <span class="tour-card__btn-ar">
+                                    <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                            fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                        <path
+                                            d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                            fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                        <path
+                                            d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                            fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                        <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                
+                
+                
+                                </span>
+                            </a>
+                        </div>
+                
+                
+                    </div>
+                
+                
+                </div>    
+                    <div class="tour-card">
+                        <div class="tour-card__top">
+                            <div class="tour-card__img-wrapper">
+                                <div class="tour-card__img-top-row">
+                                    <div class="tour-card__tags-row">
+                                        <a href="" class="tour-card__tag">Авторский тур</a>
+                                        <a href="" class="tour-card__tag">Мини-группы</a>
+                                    </div>
+                                    <div class="tour-card__rate">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                                fill="#FDFFFE" />
+                                        </svg>
+                    
+                                        <span class="tour-card__rate-num">4.8</span>
+                                    </div>
+                                </div>
+                                <div class="tour-card__img-down-row">
+                                    <div class="tour-card__period">2 дня</div>
+                                </div>
+                                <img src="./assets/image/tour2.BtoFcI4-.jpg" alt="" class="tour-card__img">
+                            </div>
+                    
+                            <div class="tour-card__body">
+                                <p class="tour-card__title">
+                                    <a href="/tour.html" class="tour-card__title-link">Под парусом от острова к острову: тайский круиз на катамаране</a>
+                                </p>
+                                <ul class="tour-card__date-list">
+                                    <li class="tour-card__date">11-12 янв</li>
+                                    <li class="tour-card__date">28 янв - 03 мар</li>
+                                </ul>
+                                <p class="tour-card__description">Оказаться в «Руках Бога», запуститьплавучий фонарик в местной Венеции прокатиться в лодке</p>
+                            </div>
+                        </div>
+                    
+                        <div class="tour-card__down">
+                            <div class="tour-card__reserve-row">
+                                <div class="tour-card__price">
+                                    $139 / <span>человек</span>
+                                </div>
+                    
+                                <a href="/tour.html" class="tour-card__btn">
+                                    Забронирывать
+                                    <span class="tour-card__btn-ar">
+                                        <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                    
+                    
+                    
+                                    </span>
+                                </a>
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    </div>    
+                    <div class="tour-card">
+                        <div class="tour-card__top">
+                            <div class="tour-card__img-wrapper">
+                                <div class="tour-card__img-top-row">
+                                    <div class="tour-card__tags-row">
+                                        <a href="" class="tour-card__tag">Авторский тур</a>
+                                        <a href="" class="tour-card__tag">Мини-группы</a>
+                                    </div>
+                                    <div class="tour-card__rate">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                                fill="#FDFFFE" />
+                                        </svg>
+                    
+                                        <span class="tour-card__rate-num">4.8</span>
+                                    </div>
+                                </div>
+                                <div class="tour-card__img-down-row">
+                                    <div class="tour-card__period">2 дня</div>
+                                </div>
+                                <img src="./assets/image/tour3.BEpAL6ki.jpg" alt="" class="tour-card__img">
+                            </div>
+                    
+                            <div class="tour-card__body">
+                                <p class="tour-card__title">
+                                    <a href="/tour.html" class="tour-card__title-link">Релакс-выходные на реке Квай: слоны, сплав на плоту и катание на лодках</a>
+                                </p>
+                                <ul class="tour-card__date-list">
+                                    <li class="tour-card__date">11-12 янв</li>
+                                    <li class="tour-card__date">28 янв - 03 мар</li>
+                                </ul>
+                                <p class="tour-card__description">Отдохнуть на лучших пляжах, расслабиться во время тайского массажа и посетить</p>
+                            </div>
+                        </div>
+                    
+                        <div class="tour-card__down">
+                            <div class="tour-card__reserve-row">
+                                <div class="tour-card__price">
+                                    $139 / <span>человек</span>
+                                </div>
+                    
+                                <a href="/tour.html" class="tour-card__btn">
+                                    Забронирывать
+                                    <span class="tour-card__btn-ar">
+                                        <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                    
+                    
+                    
+                                    </span>
+                                </a>
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    </div>    
+                    <div class="tour-card">
+                        <div class="tour-card__top">
+                            <div class="tour-card__img-wrapper">
+                                <div class="tour-card__img-top-row">
+                                    <div class="tour-card__tags-row">
+                                        <a href="" class="tour-card__tag">Авторский тур</a>
+                                        <a href="" class="tour-card__tag">Мини-группы</a>
+                                    </div>
+                                    <div class="tour-card__rate">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                                fill="#FDFFFE" />
+                                        </svg>
+                    
+                                        <span class="tour-card__rate-num">4.8</span>
+                                    </div>
+                                </div>
+                                <div class="tour-card__img-down-row">
+                                    <div class="tour-card__period">2 дня</div>
+                                </div>
+                                <img src="./assets/image/tour4.DXsWvHqY.webp" alt="" class="tour-card__img">
+                            </div>
+                    
+                            <div class="tour-card__body">
+                                <p class="tour-card__title">
+                                    <a href="/tour.html" class="tour-card__title-link">Забыть о делах: беззаботный отпуск на Пхукете в мини-группе </a>
+                                </p>
+                                <ul class="tour-card__date-list">
+                                    <li class="tour-card__date">11-12 янв</li>
+                                    <li class="tour-card__date">28 янв - 03 мар</li>
+                                </ul>
+                                <p class="tour-card__description">Полюбоваться каскадами рисовых террас, подняться к Вратам рая и узнать, как живут хмонги</p>
+                            </div>
+                        </div>
+                    
+                        <div class="tour-card__down">
+                            <div class="tour-card__reserve-row">
+                                <div class="tour-card__price">
+                                    $139 / <span>человек</span>
+                                </div>
+                    
+                                <a href="/tour.html" class="tour-card__btn">
+                                    Забронирывать
+                                    <span class="tour-card__btn-ar">
+                                        <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                    
+                    
+                    
+                                    </span>
+                                </a>
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    </div>    
+                    <div class="tour-card">
+                        <div class="tour-card__top">
+                            <div class="tour-card__img-wrapper">
+                                <div class="tour-card__img-top-row">
+                                    <div class="tour-card__tags-row">
+                                        <a href="" class="tour-card__tag">Авторский тур</a>
+                                        <a href="" class="tour-card__tag">Мини-группы</a>
+                                    </div>
+                                    <div class="tour-card__rate">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                                fill="#FDFFFE" />
+                                        </svg>
+                    
+                                        <span class="tour-card__rate-num">4.8</span>
+                                    </div>
+                                </div>
+                                <div class="tour-card__img-down-row">
+                                    <div class="tour-card__period">2 дня</div>
+                                </div>
+                                <img src="./assets/image/tour5.0G_G6fwW.jpg" alt="" class="tour-card__img">
+                            </div>
+                    
+                            <div class="tour-card__body">
+                                <p class="tour-card__title">
+                                    <a href="/tour.html" class="tour-card__title-link">Под парусом от острова к острову: тайский круиз на катамаране</a>
+                                </p>
+                                <ul class="tour-card__date-list">
+                                    <li class="tour-card__date">11-12 янв</li>
+                                    <li class="tour-card__date">28 янв - 03 мар</li>
+                                </ul>
+                                <p class="tour-card__description">Оказаться в «Руках Бога», запуститьплавучий фонарик в местной Венеции прокатиться в лодке</p>
+                            </div>
+                        </div>
+                    
+                        <div class="tour-card__down">
+                            <div class="tour-card__reserve-row">
+                                <div class="tour-card__price">
+                                    $139 / <span>человек</span>
+                                </div>
+                    
+                                <a href="/tour.html" class="tour-card__btn">
+                                    Забронирывать
+                                    <span class="tour-card__btn-ar">
+                                        <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                    
+                    
+                    
+                                    </span>
+                                </a>
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    </div>    
+                    <div class="tour-card">
+                        <div class="tour-card__top">
+                            <div class="tour-card__img-wrapper">
+                                <div class="tour-card__img-top-row">
+                                    <div class="tour-card__tags-row">
+                                        <a href="" class="tour-card__tag">Авторский тур</a>
+                                        <a href="" class="tour-card__tag">Мини-группы</a>
+                                    </div>
+                                    <div class="tour-card__rate">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.27414 6.88619C9.12325 7.03241 9.05392 7.24389 9.08829 7.4513L9.60621 10.3176C9.64991 10.5606 9.54737 10.8064 9.34405 10.9468C9.1448 11.0925 8.87973 11.1099 8.66242 10.9934L6.08214 9.64765C5.99242 9.59988 5.8928 9.57425 5.79085 9.57133H5.63297C5.5782 9.57949 5.52461 9.59697 5.47567 9.62376L2.89481 10.976C2.76722 11.04 2.62274 11.0628 2.48117 11.04C2.13628 10.9748 1.90615 10.6462 1.96267 10.2996L2.48117 7.43324C2.51554 7.22409 2.44621 7.01144 2.29532 6.86288L0.191599 4.82383C0.0156575 4.65313 -0.0455142 4.39679 0.0348829 4.1655C0.11295 3.9348 0.312195 3.76643 0.552803 3.72856L3.44826 3.30851C3.66848 3.28579 3.8619 3.1518 3.96094 2.95372L5.23681 0.337901C5.2671 0.279642 5.30614 0.226044 5.35332 0.180602L5.40576 0.139821C5.43314 0.109526 5.4646 0.0844752 5.49955 0.0640846L5.56306 0.0407811L5.6621 0H5.90737C6.12642 0.0227209 6.31925 0.153803 6.42004 0.349553L7.7128 2.95372C7.80602 3.14423 7.9872 3.27647 8.19635 3.30851L11.0918 3.72856C11.3365 3.76352 11.541 3.93247 11.622 4.1655C11.6983 4.39912 11.6325 4.65546 11.453 4.82383L9.27414 6.88619Z"
+                                                fill="#FDFFFE" />
+                                        </svg>
+                    
+                                        <span class="tour-card__rate-num">4.8</span>
+                                    </div>
+                                </div>
+                                <div class="tour-card__img-down-row">
+                                    <div class="tour-card__period">2 дня</div>
+                                </div>
+                                <img src="./assets/image/tour6.CDOMkz2g.jpg" alt="" class="tour-card__img">
+                            </div>
+                    
+                            <div class="tour-card__body">
+                                <p class="tour-card__title">
+                                    <a href="/tour.html" class="tour-card__title-link">Релакс-выходные на реке Квай: слоны, сплав на плоту и катание на лодках</a>
+                                </p>
+                                <ul class="tour-card__date-list">
+                                    <li class="tour-card__date">11-12 янв</li>
+                                    <li class="tour-card__date">28 янв - 03 мар</li>
+                                </ul>
+                                <p class="tour-card__description">Отдохнуть на лучших пляжах, расслабиться во время тайского массажа и посетить</p>
+                            </div>
+                        </div>
+                    
+                        <div class="tour-card__down">
+                            <div class="tour-card__reserve-row">
+                                <div class="tour-card__price">
+                                    $139 / <span>человек</span>
+                                </div>
+                    
+                                <a href="/tour.html" class="tour-card__btn">
+                                    Забронирывать
+                                    <span class="tour-card__btn-ar">
+                                        <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path
+                                                d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                                fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                            <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                    
+                    
+                    
+                                    </span>
+                                </a>
+                            </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    </div>        
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="directions-guide-sec">
+        <div class="container">
+            <div class="sec-header">
+                <div class="sec-header__text">
+                    <h2 class="sec-title">Гиды по призванию</h2>
+                    <p class="sec-header__subtitle">Встречи с интересными людьми, куда бы вы ни поехали</p>
+                </div>
+    
+                <!-- <a href="" class="sec-header__btn">Все туры</a> -->
+    
+            </div>
+            <div class="home-guide-sec__slider-wrapper">
+                <div class="swiper guide-slider-swiper">
+    
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <div class="guide-card-2">
+                                <div class="guide-card-2__top">
+                                    <a href="/guide.html" class="guide-card-2__img-wrapper">
+                                        <img src="./assets/image/guide5.D8m6Xiz9.png" alt="" class="guide-card-2__img">
+                                    </a>
+                            
+                                    <div class="guide-card-2__data">
+                                        <p class="guide-card-2__name">
+                                            <a href="" class="guide-card-2__name-link">Марина</a>
+                                        </p>
+                                        <p class="guide-card-2__subtitle">Журналист из Петербурга</p>
+                                        <p class="guide-card-2__desctiption">Я филолог, тележурналист и любитель рассказывать истории. Побродить
+                                            маршрутами литературных героев, заглянуть </p>
+                            
+                            
+                                    </div>
+                                </div>
+                                <div class="guide-card-2__down">
+                                    <div class="guide-card-2__rate-row">
+                                        <div class="guide-card__rate">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                                            <span class="guide-card__rate-rate-count">5.0</span>
+                                        </div>
+                            
+                                        <div class="guide-card__reviews">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.1982 4.09884C12.1086 4.09884 12.8534 3.34535 12.8534 2.42442C12.8534 1.50349 12.1086 0.75 11.1982 0.75C10.2879 0.75 9.54302 1.50349 9.54302 2.42442C9.54302 3.34535 10.2879 4.09884 11.1982 4.09884ZM14.9141 8.57031C14.3047 8.57031 14.0152 8.34323 13.7891 8.22471C13.1046 7.86601 12.5521 7.32976 12.1913 6.69419L11.3637 5.35465C11.0244 4.81046 10.4451 4.51744 9.84095 4.51744C9.19543 4.51744 8.52507 4.93605 8.36783 5.72302L6.02573 17.7119C5.91814 18.2477 6.32366 18.75 6.86988 18.75C7.2754 18.75 7.62299 18.4653 7.71403 18.0719L9.04646 12.0523L10.7844 13.7267V17.9128C10.7844 18.3733 11.1568 18.75 11.612 18.75C12.0672 18.75 12.4396 18.3733 12.4396 17.9128V13.1909C12.4396 12.7305 12.2575 12.2951 11.9265 11.977L10.7017 10.7965L11.1982 8.28488C11.7482 8.92468 12.448 9.45726 13.2417 9.82367C13.6425 10.0086 14.4961 10.2266 14.9141 10.2266C15.332 10.2266 15.75 9.90234 15.75 9.39844C15.75 8.89453 15.3242 8.57031 14.9141 8.57031ZM6.1747 10.4867L4.42019 10.1435C3.97329 10.0514 3.67535 9.61605 3.76639 9.16395L4.39536 5.87372C4.56916 4.96953 5.43813 4.37512 6.33194 4.55093L7.29195 4.74349L6.1747 10.4867Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                            
+                                            <span class="guide-card__reviews-counter">77 отзывов</span>
+                                        </div>
+                                    </div>
+                            
+                                    <a href="/guide.html" class="guide-card-2__btn">Посмотреть экскурсии гида</a>
+                                </div>
+                            
+                            </div>                    </div>
+    
+                        <div class="swiper-slide">
+                            <div class="guide-card-2">
+                                <div class="guide-card-2__top">
+                                    <a href="/guide.html" class="guide-card-2__img-wrapper">
+                                        <img src="./assets/image/guide6.BJCprAf8.jpg" alt="" class="guide-card-2__img">
+                                    </a>
+                            
+                                    <div class="guide-card-2__data">
+                                        <p class="guide-card-2__name">
+                                            <a href="" class="guide-card-2__name-link">Марина</a>
+                                        </p>
+                                        <p class="guide-card-2__subtitle">Журналист из Петербурга</p>
+                                        <p class="guide-card-2__desctiption">Я филолог, тележурналист и любитель рассказывать истории. Побродить
+                                            маршрутами литературных героев, заглянуть </p>
+                            
+                            
+                                    </div>
+                                </div>
+                                <div class="guide-card-2__down">
+                                    <div class="guide-card-2__rate-row">
+                                        <div class="guide-card__rate">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                                            <span class="guide-card__rate-rate-count">5.0</span>
+                                        </div>
+                            
+                                        <div class="guide-card__reviews">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.1982 4.09884C12.1086 4.09884 12.8534 3.34535 12.8534 2.42442C12.8534 1.50349 12.1086 0.75 11.1982 0.75C10.2879 0.75 9.54302 1.50349 9.54302 2.42442C9.54302 3.34535 10.2879 4.09884 11.1982 4.09884ZM14.9141 8.57031C14.3047 8.57031 14.0152 8.34323 13.7891 8.22471C13.1046 7.86601 12.5521 7.32976 12.1913 6.69419L11.3637 5.35465C11.0244 4.81046 10.4451 4.51744 9.84095 4.51744C9.19543 4.51744 8.52507 4.93605 8.36783 5.72302L6.02573 17.7119C5.91814 18.2477 6.32366 18.75 6.86988 18.75C7.2754 18.75 7.62299 18.4653 7.71403 18.0719L9.04646 12.0523L10.7844 13.7267V17.9128C10.7844 18.3733 11.1568 18.75 11.612 18.75C12.0672 18.75 12.4396 18.3733 12.4396 17.9128V13.1909C12.4396 12.7305 12.2575 12.2951 11.9265 11.977L10.7017 10.7965L11.1982 8.28488C11.7482 8.92468 12.448 9.45726 13.2417 9.82367C13.6425 10.0086 14.4961 10.2266 14.9141 10.2266C15.332 10.2266 15.75 9.90234 15.75 9.39844C15.75 8.89453 15.3242 8.57031 14.9141 8.57031ZM6.1747 10.4867L4.42019 10.1435C3.97329 10.0514 3.67535 9.61605 3.76639 9.16395L4.39536 5.87372C4.56916 4.96953 5.43813 4.37512 6.33194 4.55093L7.29195 4.74349L6.1747 10.4867Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                            
+                                            <span class="guide-card__reviews-counter">77 отзывов</span>
+                                        </div>
+                                    </div>
+                            
+                                    <a href="/guide.html" class="guide-card-2__btn">Посмотреть экскурсии гида</a>
+                                </div>
+                            
+                            </div>                    </div>
+    
+                        <div class="swiper-slide">
+                            <div class="guide-card-2">
+                                <div class="guide-card-2__top">
+                                    <a href="/guide.html" class="guide-card-2__img-wrapper">
+                                        <img src="./assets/image/guide7.CelNsuD5.jpg" alt="" class="guide-card-2__img">
+                                    </a>
+                            
+                                    <div class="guide-card-2__data">
+                                        <p class="guide-card-2__name">
+                                            <a href="" class="guide-card-2__name-link">Марина</a>
+                                        </p>
+                                        <p class="guide-card-2__subtitle">Журналист из Петербурга</p>
+                                        <p class="guide-card-2__desctiption">Я филолог, тележурналист и любитель рассказывать истории. Побродить
+                                            маршрутами литературных героев, заглянуть </p>
+                            
+                            
+                                    </div>
+                                </div>
+                                <div class="guide-card-2__down">
+                                    <div class="guide-card-2__rate-row">
+                                        <div class="guide-card__rate">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                                            <span class="guide-card__rate-rate-count">5.0</span>
+                                        </div>
+                            
+                                        <div class="guide-card__reviews">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.1982 4.09884C12.1086 4.09884 12.8534 3.34535 12.8534 2.42442C12.8534 1.50349 12.1086 0.75 11.1982 0.75C10.2879 0.75 9.54302 1.50349 9.54302 2.42442C9.54302 3.34535 10.2879 4.09884 11.1982 4.09884ZM14.9141 8.57031C14.3047 8.57031 14.0152 8.34323 13.7891 8.22471C13.1046 7.86601 12.5521 7.32976 12.1913 6.69419L11.3637 5.35465C11.0244 4.81046 10.4451 4.51744 9.84095 4.51744C9.19543 4.51744 8.52507 4.93605 8.36783 5.72302L6.02573 17.7119C5.91814 18.2477 6.32366 18.75 6.86988 18.75C7.2754 18.75 7.62299 18.4653 7.71403 18.0719L9.04646 12.0523L10.7844 13.7267V17.9128C10.7844 18.3733 11.1568 18.75 11.612 18.75C12.0672 18.75 12.4396 18.3733 12.4396 17.9128V13.1909C12.4396 12.7305 12.2575 12.2951 11.9265 11.977L10.7017 10.7965L11.1982 8.28488C11.7482 8.92468 12.448 9.45726 13.2417 9.82367C13.6425 10.0086 14.4961 10.2266 14.9141 10.2266C15.332 10.2266 15.75 9.90234 15.75 9.39844C15.75 8.89453 15.3242 8.57031 14.9141 8.57031ZM6.1747 10.4867L4.42019 10.1435C3.97329 10.0514 3.67535 9.61605 3.76639 9.16395L4.39536 5.87372C4.56916 4.96953 5.43813 4.37512 6.33194 4.55093L7.29195 4.74349L6.1747 10.4867Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                            
+                                            <span class="guide-card__reviews-counter">77 отзывов</span>
+                                        </div>
+                                    </div>
+                            
+                                    <a href="/guide.html" class="guide-card-2__btn">Посмотреть экскурсии гида</a>
+                                </div>
+                            
+                            </div>                    </div>
+    
+                        <div class="swiper-slide">
+                            <div class="guide-card-2">
+                                <div class="guide-card-2__top">
+                                    <a href="/guide.html" class="guide-card-2__img-wrapper">
+                                        <img src="./assets/image/guide8.IVOPhPtP.png" alt="" class="guide-card-2__img">
+                                    </a>
+                            
+                                    <div class="guide-card-2__data">
+                                        <p class="guide-card-2__name">
+                                            <a href="" class="guide-card-2__name-link">Марина</a>
+                                        </p>
+                                        <p class="guide-card-2__subtitle">Журналист из Петербурга</p>
+                                        <p class="guide-card-2__desctiption">Я филолог, тележурналист и любитель рассказывать истории. Побродить
+                                            маршрутами литературных героев, заглянуть </p>
+                            
+                            
+                                    </div>
+                                </div>
+                                <div class="guide-card-2__down">
+                                    <div class="guide-card-2__rate-row">
+                                        <div class="guide-card__rate">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                                            <span class="guide-card__rate-rate-count">5.0</span>
+                                        </div>
+                            
+                                        <div class="guide-card__reviews">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.1982 4.09884C12.1086 4.09884 12.8534 3.34535 12.8534 2.42442C12.8534 1.50349 12.1086 0.75 11.1982 0.75C10.2879 0.75 9.54302 1.50349 9.54302 2.42442C9.54302 3.34535 10.2879 4.09884 11.1982 4.09884ZM14.9141 8.57031C14.3047 8.57031 14.0152 8.34323 13.7891 8.22471C13.1046 7.86601 12.5521 7.32976 12.1913 6.69419L11.3637 5.35465C11.0244 4.81046 10.4451 4.51744 9.84095 4.51744C9.19543 4.51744 8.52507 4.93605 8.36783 5.72302L6.02573 17.7119C5.91814 18.2477 6.32366 18.75 6.86988 18.75C7.2754 18.75 7.62299 18.4653 7.71403 18.0719L9.04646 12.0523L10.7844 13.7267V17.9128C10.7844 18.3733 11.1568 18.75 11.612 18.75C12.0672 18.75 12.4396 18.3733 12.4396 17.9128V13.1909C12.4396 12.7305 12.2575 12.2951 11.9265 11.977L10.7017 10.7965L11.1982 8.28488C11.7482 8.92468 12.448 9.45726 13.2417 9.82367C13.6425 10.0086 14.4961 10.2266 14.9141 10.2266C15.332 10.2266 15.75 9.90234 15.75 9.39844C15.75 8.89453 15.3242 8.57031 14.9141 8.57031ZM6.1747 10.4867L4.42019 10.1435C3.97329 10.0514 3.67535 9.61605 3.76639 9.16395L4.39536 5.87372C4.56916 4.96953 5.43813 4.37512 6.33194 4.55093L7.29195 4.74349L6.1747 10.4867Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                            
+                                            <span class="guide-card__reviews-counter">77 отзывов</span>
+                                        </div>
+                                    </div>
+                            
+                                    <a href="/guide.html" class="guide-card-2__btn">Посмотреть экскурсии гида</a>
+                                </div>
+                            
+                            </div>                    </div>
+    
+                        <div class="swiper-slide">
+                            <div class="guide-card-2">
+                                <div class="guide-card-2__top">
+                                    <a href="/guide.html" class="guide-card-2__img-wrapper">
+                                        <img src="./assets/image/guide2.D0mjxsXS.jpg" alt="" class="guide-card-2__img">
+                                    </a>
+                            
+                                    <div class="guide-card-2__data">
+                                        <p class="guide-card-2__name">
+                                            <a href="" class="guide-card-2__name-link">Марина</a>
+                                        </p>
+                                        <p class="guide-card-2__subtitle">Журналист из Петербурга</p>
+                                        <p class="guide-card-2__desctiption">Я филолог, тележурналист и любитель рассказывать истории. Побродить
+                                            маршрутами литературных героев, заглянуть </p>
+                            
+                            
+                                    </div>
+                                </div>
+                                <div class="guide-card-2__down">
+                                    <div class="guide-card-2__rate-row">
+                                        <div class="guide-card__rate">
+                                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                                            <span class="guide-card__rate-rate-count">5.0</span>
+                                        </div>
+                            
+                                        <div class="guide-card__reviews">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.1982 4.09884C12.1086 4.09884 12.8534 3.34535 12.8534 2.42442C12.8534 1.50349 12.1086 0.75 11.1982 0.75C10.2879 0.75 9.54302 1.50349 9.54302 2.42442C9.54302 3.34535 10.2879 4.09884 11.1982 4.09884ZM14.9141 8.57031C14.3047 8.57031 14.0152 8.34323 13.7891 8.22471C13.1046 7.86601 12.5521 7.32976 12.1913 6.69419L11.3637 5.35465C11.0244 4.81046 10.4451 4.51744 9.84095 4.51744C9.19543 4.51744 8.52507 4.93605 8.36783 5.72302L6.02573 17.7119C5.91814 18.2477 6.32366 18.75 6.86988 18.75C7.2754 18.75 7.62299 18.4653 7.71403 18.0719L9.04646 12.0523L10.7844 13.7267V17.9128C10.7844 18.3733 11.1568 18.75 11.612 18.75C12.0672 18.75 12.4396 18.3733 12.4396 17.9128V13.1909C12.4396 12.7305 12.2575 12.2951 11.9265 11.977L10.7017 10.7965L11.1982 8.28488C11.7482 8.92468 12.448 9.45726 13.2417 9.82367C13.6425 10.0086 14.4961 10.2266 14.9141 10.2266C15.332 10.2266 15.75 9.90234 15.75 9.39844C15.75 8.89453 15.3242 8.57031 14.9141 8.57031ZM6.1747 10.4867L4.42019 10.1435C3.97329 10.0514 3.67535 9.61605 3.76639 9.16395L4.39536 5.87372C4.56916 4.96953 5.43813 4.37512 6.33194 4.55093L7.29195 4.74349L6.1747 10.4867Z"
+                                                    fill="#5DB8A6" />
+                                            </svg>
+                            
+                                            <span class="guide-card__reviews-counter">77 отзывов</span>
+                                        </div>
+                                    </div>
+                            
+                                    <a href="/guide.html" class="guide-card-2__btn">Посмотреть экскурсии гида</a>
+                                </div>
+                            
+                            </div>                    </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="swiper-button-blog guide-swiper-button-prev">
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.15429 13.7071C8.53841 13.3166 8.53841 12.6834 8.15429 12.2929L2.94817 7L8.15429 1.70711C8.53841 1.31658 8.53841 0.683417 8.15429 0.292893C7.77017 -0.0976315 7.14738 -0.0976315 6.76326 0.292893L0.861622 6.29289C0.4775 6.68342 0.4775 7.31658 0.861622 7.70711L6.76326 13.7071C7.14738 14.0976 7.77017 14.0976 8.15429 13.7071Z"
+                            fill="#5D736E" />
+                    </svg>
+                </div>
+                <div class="swiper-button-blog guide-swiper-button-next">
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.845709 13.7071C0.461587 13.3166 0.461587 12.6834 0.845709 12.2929L6.05183 7L0.845708 1.70711C0.461586 1.31658 0.461586 0.683417 0.845708 0.292893C1.22983 -0.0976315 1.85262 -0.0976315 2.23674 0.292893L8.13838 6.29289C8.5225 6.68342 8.5225 7.31658 8.13838 7.70711L2.23674 13.7071C1.85262 14.0976 1.22983 14.0976 0.845709 13.7071Z"
+                            fill="#5D736E" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="reviews-sec directions-reviews-sec">
+        <div class="container">
+            <div class="reviews-sec__title">38 отзывов путешественников</div>
+            <div class="reviews-sec__wrapper">
+    
+                <div class="review">
+                    <div class="review__img-wrapper">
+                        <img src="./assets/image/tour1.AuwWnMIk.jpg" alt="" class="review__img">
+                    </div>
+                    <div class="review__body">
+                        <div class="review__user-data-row">
+                            <div class="review__user">
+                                <img src="./assets/image/user1.CDEjALZz.webp" alt="" class="review__user-img">
+                                <div class="review__user-name">Игорь</div>
+                                <div class="review__rate-row">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                
+                            <div class="review__date">
+                                11 декабря 2025
+                            </div>
+                        </div>
+                        <p class="review__name-tour">
+                            <a href="" class="review__name-tour-link">Северные провинции и тысячи островов: Ханой, Халонг, Дананг и
+                                Хойан из Нячанга</a>
+                        </p>
+                
+                        <div class="review__text">
+                            Была в туре по Юго-Восточной Азии 18.11.25-01.12.25. Впечатления на всю жизнь — просто фантастически крутое
+                            путешествие у нас получилось! Выражаю огромную благодарность агенству и гиду Алёне за то, что подарили мне
+                            возможность познакомиться с такими разными, но по-своему чудесными дальними странами! Теперь чуть подробнее
+                            о путешествии и организационных моментах… 1. Коллектив: у нас было две «подгруппы» по 7-8 человек с двумя
+                            разными гидами,
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__img-wrapper">
+                        <img src="./assets/image/tour2.BtoFcI4-.jpg" alt="" class="review__img">
+                    </div>
+                    <div class="review__body">
+                        <div class="review__user-data-row">
+                            <div class="review__user">
+                                <img src="./assets/image/user1.CDEjALZz.webp" alt="" class="review__user-img">
+                                <div class="review__user-name">Игорь</div>
+                                <div class="review__rate-row">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                
+                            <div class="review__date">
+                                11 декабря 2025
+                            </div>
+                        </div>
+                        <p class="review__name-tour">
+                            <a href="" class="review__name-tour-link">Северные провинции и тысячи островов: Ханой, Халонг, Дананг и
+                                Хойан из Нячанга</a>
+                        </p>
+                
+                        <div class="review__text">
+                            Была в туре по Юго-Восточной Азии 18.11.25-01.12.25. Впечатления на всю жизнь — просто фантастически крутое
+                            путешествие у нас получилось! Выражаю огромную благодарность агенству и гиду Алёне за то, что подарили мне
+                            возможность познакомиться с такими разными, но по-своему чудесными дальними странами! Теперь чуть подробнее
+                            о путешествии и организационных моментах… 1. Коллектив: у нас было две «подгруппы» по 7-8 человек с двумя
+                            разными гидами,
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__img-wrapper">
+                        <img src="./assets/image/tour3.BEpAL6ki.jpg" alt="" class="review__img">
+                    </div>
+                    <div class="review__body">
+                        <div class="review__user-data-row">
+                            <div class="review__user">
+                                <img src="./assets/image/user1.CDEjALZz.webp" alt="" class="review__user-img">
+                                <div class="review__user-name">Игорь</div>
+                                <div class="review__rate-row">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                
+                            <div class="review__date">
+                                11 декабря 2025
+                            </div>
+                        </div>
+                        <p class="review__name-tour">
+                            <a href="" class="review__name-tour-link">Северные провинции и тысячи островов: Ханой, Халонг, Дананг и
+                                Хойан из Нячанга</a>
+                        </p>
+                
+                        <div class="review__text">
+                            Была в туре по Юго-Восточной Азии 18.11.25-01.12.25. Впечатления на всю жизнь — просто фантастически крутое
+                            путешествие у нас получилось! Выражаю огромную благодарность агенству и гиду Алёне за то, что подарили мне
+                            возможность познакомиться с такими разными, но по-своему чудесными дальними странами! Теперь чуть подробнее
+                            о путешествии и организационных моментах… 1. Коллектив: у нас было две «подгруппы» по 7-8 человек с двумя
+                            разными гидами,
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__img-wrapper">
+                        <img src="./assets/image/tour6.CDOMkz2g.jpg" alt="" class="review__img">
+                    </div>
+                    <div class="review__body">
+                        <div class="review__user-data-row">
+                            <div class="review__user">
+                                <img src="./assets/image/user1.CDEjALZz.webp" alt="" class="review__user-img">
+                                <div class="review__user-name">Игорь</div>
+                                <div class="review__rate-row">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                
+                            <div class="review__date">
+                                11 декабря 2025
+                            </div>
+                        </div>
+                        <p class="review__name-tour">
+                            <a href="" class="review__name-tour-link">Северные провинции и тысячи островов: Ханой, Халонг, Дананг и
+                                Хойан из Нячанга</a>
+                        </p>
+                
+                        <div class="review__text">
+                            Была в туре по Юго-Восточной Азии 18.11.25-01.12.25. Впечатления на всю жизнь — просто фантастически крутое
+                            путешествие у нас получилось! Выражаю огромную благодарность агенству и гиду Алёне за то, что подарили мне
+                            возможность познакомиться с такими разными, но по-своему чудесными дальними странами! Теперь чуть подробнее
+                            о путешествии и организационных моментах… 1. Коллектив: у нас было две «подгруппы» по 7-8 человек с двумя
+                            разными гидами,
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__img-wrapper">
+                        <img src="./assets/image/tour5.0G_G6fwW.jpg" alt="" class="review__img">
+                    </div>
+                    <div class="review__body">
+                        <div class="review__user-data-row">
+                            <div class="review__user">
+                                <img src="./assets/image/user1.CDEjALZz.webp" alt="" class="review__user-img">
+                                <div class="review__user-name">Игорь</div>
+                                <div class="review__rate-row">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.9178 11.8192C15.6588 12.0702 15.5398 12.4332 15.5988 12.7891L16.4878 17.7088C16.5628 18.1258 16.3868 18.5478 16.0378 18.7887C15.6958 19.0387 15.2409 19.0687 14.8679 18.8687L10.4392 16.5589C10.2852 16.4769 10.1142 16.4329 9.93921 16.4279H9.66823C9.57423 16.4419 9.48224 16.4719 9.39825 16.5179L4.96854 18.8387C4.74956 18.9487 4.50157 18.9877 4.25859 18.9487C3.66663 18.8367 3.27166 18.2728 3.36865 17.6778L4.25859 12.7581C4.31759 12.3992 4.19859 12.0342 3.93961 11.7792L0.328854 8.27945C0.026874 7.98647 -0.078119 7.5465 0.0598718 7.14952C0.193863 6.75355 0.53584 6.46457 0.948812 6.39957L5.91848 5.67862C6.29645 5.63962 6.62843 5.40964 6.79842 5.06966L8.98827 0.579961C9.04027 0.479968 9.10727 0.387974 9.18826 0.309979L9.27825 0.239984C9.32525 0.187987 9.37925 0.14499 9.43924 0.109993L9.54824 0.0699953L9.71823 0H10.1392C10.5152 0.0389974 10.8461 0.263982 11.0191 0.59996L13.238 5.06966C13.398 5.39664 13.709 5.62362 14.0679 5.67862L19.0376 6.39957C19.4576 6.45957 19.8085 6.74955 19.9475 7.14952C20.0785 7.5505 19.9655 7.99047 19.6576 8.27945L15.9178 11.8192Z"
+                                            fill="#5DB8A6" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                
+                            <div class="review__date">
+                                11 декабря 2025
+                            </div>
+                        </div>
+                        <p class="review__name-tour">
+                            <a href="" class="review__name-tour-link">Северные провинции и тысячи островов: Ханой, Халонг, Дананг и
+                                Хойан из Нячанга</a>
+                        </p>
+                
+                        <div class="review__text">
+                            Была в туре по Юго-Восточной Азии 18.11.25-01.12.25. Впечатления на всю жизнь — просто фантастически крутое
+                            путешествие у нас получилось! Выражаю огромную благодарность агенству и гиду Алёне за то, что подарили мне
+                            возможность познакомиться с такими разными, но по-своему чудесными дальними странами! Теперь чуть подробнее
+                            о путешествии и организационных моментах… 1. Коллектив: у нас было две «подгруппы» по 7-8 человек с двумя
+                            разными гидами,
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="home-blog-sec directions-blog-sec">
+    
+        <div class="container">
+            <div class="sec-header">
+                <div class="sec-header__text">
+                    <h2 class="sec-title">Полезные статьи</h2>
+                    <!-- <p class="sec-header__subtitle">Путешествия в места, которые не посмотреть за день</p> -->
+                </div>
+    
+                <a href="" class="sec-header__btn">Все статьи</a>
+            </div>
+        </div>
+    
+        <div class="blog-slider-wrapper">
+            <div class="swiper post-slider-swiper">
+        
+                <div class="swiper-wrapper">
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post1.DmBlYCEk.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Где отдыхать во Вьетнаме
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post2.BKyHK2t0.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Фукуок — изумрудный остров в Сиамском заливе
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post3.MtZbYBS-.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Вьетнамская кухня: 10 блюд, которые стоит попробовать
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post2.BKyHK2t0.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Фукуок — изумрудный остров в Сиамском заливе
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post1.DmBlYCEk.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Где отдыхать во Вьетнаме
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post2.BKyHK2t0.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Фукуок — изумрудный остров в Сиамском заливе
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+        
+                    <div class="swiper-slide">
+                        <div class=" blog-post">
+                            <a href="post.html" class="blog-post__image-wrapper">
+                                <img src="./assets/image/post3.MtZbYBS-.jpg" alt="" class="blog-post__image">
+                            </a>
+                            <div class="blog-post__data">
+                                <p class="blog-post__date">21 июня 2025</p>
+                                <div class="blog-post__header">
+                                    <p class="blog-post__title">
+                                        Вьетнамская кухня: 10 блюд, которые стоит попробовать
+                                    </p>
+                                    <a href="post.html" class="blog-post__link-ar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z"
+                                                fill="#85D2A9" />
+                                        </svg>
+                        
+                                    </a>
+                                </div>
+                        
+                                <p class="blog-post__subtitle">В данной статье мы расскажем Вам, про самые
+                                    выдающие новостройки Москвы. Рассмотрим отзывы покупателей, ценовую
+                                    политику,
+                                    расположение, благоустройство...</p>
+                        
+                                <div class="blog-post__teg-row">
+                                    <a href="" class="blog-post__teg">Кредитование</a>
+                        
+                                    <a href="" class="blog-post__teg">Иновации</a>
+                        
+                                    <a href="" class="blog-post__teg">Строительство</a>
+                                </div>
+                            </div>
+                        
+                        </div>            </div>
+        
+        
+        
+                </div>
+        
+        
+            </div>
+        
+            <div class="swiper-button-blog blog-swiper-button-prev">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.15429 13.7071C8.53841 13.3166 8.53841 12.6834 8.15429 12.2929L2.94817 7L8.15429 1.70711C8.53841 1.31658 8.53841 0.683417 8.15429 0.292893C7.77017 -0.0976315 7.14738 -0.0976315 6.76326 0.292893L0.861622 6.29289C0.4775 6.68342 0.4775 7.31658 0.861622 7.70711L6.76326 13.7071C7.14738 14.0976 7.77017 14.0976 8.15429 13.7071Z"
+                        fill="#5D736E" />
+                </svg>
+            </div>
+            <div class="swiper-button-blog blog-swiper-button-next">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.845709 13.7071C0.461587 13.3166 0.461587 12.6834 0.845709 12.2929L6.05183 7L0.845708 1.70711C0.461586 1.31658 0.461586 0.683417 0.845708 0.292893C1.22983 -0.0976315 1.85262 -0.0976315 2.23674 0.292893L8.13838 6.29289C8.5225 6.68342 8.5225 7.31658 8.13838 7.70711L2.23674 13.7071C1.85262 14.0976 1.22983 14.0976 0.845709 13.7071Z"
+                        fill="#5D736E" />
+                </svg>
+            </div>
+        </div></section>
+</main>
+
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <h4 class="footer__col-title">О компании</h4>
+                    <a href="/" class="footer__logo">
+                        <img src="./assets/image/header-logo-test-2.CbRQm15C.jpg" alt="Логотип" class="footer__logo-img">
+                    </a>
+                    <p class="footer__tagline">Путешествия с гидами, которые знают места лучше любого путеводителя. Туры по всему миру — от Норвегии до Таиланда.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Навигация</h4>
+                    <ul class="footer__links">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/tours.html">Туры</a></li>
+                        <li><a href="/tours.html">Гиды</a></li>
+                        <li><a href="/blog.html">Полезные статьи</a></li>
+                        <li><a href="/">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--directions">
+                    <h4 class="footer__col-title">Направления</h4>
+                    <ul class="footer__links">
+                        <li><a href="/tours.html?direction=norway">Норвегия</a></li>
+                        <li><a href="/tours.html?direction=kamchatka">Камчатка</a></li>
+                        <li><a href="/tours.html?direction=italy">Италия</a></li>
+                        <li><a href="/tours.html?direction=thailand">Тайланд</a></li>
+                        <li><a href="/tours.html?direction=iceland">Исландия</a></li>
+                        <li><a href="/tours.html?direction=canada">Канада</a></li>
+                        <li><a href="/tours.html?direction=karelia">Карелия</a></li>
+                        <li><a href="/tours.html?direction=crimea">Крым</a></li>
+                        <li><a href="/tours.html?direction=jordan">Иордания</a></li>
+                        <li><a href="/tours.html?direction=greece">Греция</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Контакты</h4>
+                    <ul class="footer__links footer__links--contacts">
+                        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--subscribe">
+                    <h4 class="footer__col-title">Подписаться</h4>
+                    <p class="footer__subscribe-text">Подпишитесь на рассылку — советы по путешествиям и скидки на туры</p>
+                    <form class="footer__subscribe-form" action="#" method="post">
+                        <input type="email" class="footer__subscribe-input" placeholder="Ваш email..." required>
+                        <button type="submit" class="footer__subscribe-btn" aria-label="Подписаться">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="ВКонтакте">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4 8.57 4 6.405c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.49-.085.744-.576.744z"/></svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__divider"></div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__bottom-inner">
+                <p class="footer__copy">© 2026 Путешествия. Все права защищены.</p>
+                <div class="footer__payments">
+                    <img src="data:image/webp;base64,UklGRiAGAABXRUJQVlA4WAoAAAAwAAAAYwAAJwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDhMMQQAAC9jwAkQ98Emsm0nL5BzBRJQQI+DVGZnGSqsIeH9/224rW1biQ5uj8jJKIHcoQUaoTNCQmcmn3aUUSRJUlLRehg04AwfSKA1gIr7N38Ism1xT/BFnf9l0KzlG3L9N7BZl7L1CQxsMG+fn5Or3jau5alzBtGMweCADXt5m5xhvMrTZObneXH4X2Pq5wQGEWgFgn6e+cEHVK4qMWiEMF/lLhOCQUYBoRxX1bR46oQwHuVpkiPNlhZlpzA9FcUuyk6ONFua4zdHGmhLkuTIjUCtNQmNXZyGFuSQp8f//7MW05XdvLd7i+i/A7dtI2n2mKsZuI7jdL4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAracf9vb29t6+/H6AP9/M8zzP8zzP8zyfPo6QtqdpmqZpmh7ya4HwPFzZPvk8VWAn21sJ7tuTgmYvYXmRL3y5nwBdFYwrnBcMT8rRQXslHMRfwPJLZ/jHdLATwLyc4nwKhNsW0qPNtHu/sw4jCeTowU8Byg8R97OC4bf2V68mqhIjEc2D7nf/z3a7GSDiPd7VOfSPa8p7jFTE7Rbn/cc/zbfe+FAAXiwg9gqITwuIgwD+8+VvZw2XrzfwS/byjA/7wv48fWu+rxocdwpOo2NkQ2yd9fOtRnfPj6+e5H2SeX87maavfy0DCxHpyTly0URANFSCS/q6A/tV+NfdwHKe9jly0URNXv7VxBZ51grLsCotX/9eBjaMhazkyGbWQUpD+4Loqsimf6MRzbd/NwOb80RSjmxAhBwcFOjpyZXm40J+F1jB8/tmYKOZwNFA5L27RNeZtxfTk8uUNvZX0jicwz93GrILuMX/oksWFN2D8OQKLzjAVtwKL82YHxuXSCRnlxxysPXDtC+sJY5fDgvlejnvlUWtgSrLzTdffBqAF7NZ2BgeeFR29zfTj7aYXTIk47xTfk9LmVVCljmMWH6r2kpsg7K1pl5kFE17saql3efCGqr+RqhBtSdBjm1kbXYZ5e5yEHS+aCeXwMNhy99MqQjsUS3uaJnFcbN6j5IhNmXW0fDnvj9Ungpt29kIc/PtJzUY4vLkimG9Xq/X689Dlp9Zvuq6w0gjr8mriDpO37H8gRttX01+XiJHGvlQb0sNs2f5ozdShQxFbtdyblJfITYO3ft28tpZZXU6dD+ynf7Z5kJJ6UmAOLYfGxjaXvDRfmSj01YpJydXnxPEZYkSt+/o863SO8uPfuRi9mP4395lq+ZxtVqtVqvVanUyLJ6l36QOPhLZ8DSyGMorglocyfLHboS21o/sKCWtid43ous2w2HLL9YTFtQDkZngxMGGn+XJFW1sH4N9vrOeuivwQZd8c3wVy2pvq7cGjPkOff6/exfpGeTz7eVd5P1mWfd/7WUSAA==" alt="Visa" class="footer__payment-img" width="48" height="32">
+                    <img src="data:image/webp;base64,UklGRkwHAABXRUJQVlA4WAoAAAAwAAAAQQAAJwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDhMXgUAAC9BwAkQtwW9tm1Tz9rnnXs/fzGLeiwwP/3QU2zbSRNuI0l2lR60qV49XPJPCryPTIGCG9u262SfK4u5Fwqw8VMfmNzlrgEVgIsRDWhUgWiACqgAGviQM4r8fQTZtrgn2OvA/eSzsHH7h32Rqh51Lwf0YfM4h76+ufTX/85xBR1xh8/Wlc/22rHGpi1feHfdKD+t2pmyt82gnhv5t1UCzUj6s/xnGdRjDYZVKp7tGdRzDab8WPVM1ctGVM9kquLd2ndkUI8NGFYoXrqgmRswlMpX681M1dv+HQR7IxEM8rdd0MxUvu2jEARCbGbgAEF+CSaKr36YQvDZt8TADAchSAWxvkycgtz3aerMDHfVhxFElyBSQV6bWnYL8tDE2C2IaUwqBJCb3s0amuEEZ71a9uixFwLI0JMZjgC5bSjYs+aN4KIHi8aeerFmRHDcjali3ch+F1wQuLBoTHDcjSC4IHDBBYELQRi5I3hoAiIVxLnoiuC1KYhzAohz/4OIc4kBabz0xzlIojANiAtB+GgmCC6AorZti9Oo7u7u7m44Xzt195CVYVINg0+3nh26fDhEWtzdnfc/PhhJ/u4JRPSfgSQpcdaLACoeQd4ghBBCCCGEEELM33rkUlwKxZ09sXVpNIsWbzt6OSmVky6e2bZCCCGEEEIIEc242fviiIiIiIiIruyb77Ro7oEkZmZmZmbmhO2LY6VSiIjInXFkvp1KZWZmd8ahWIhV8URky1EU1guxxkUjisKGqGUfEVFsxN4DzMyxEfujlOMUO65/59jzMddyWLLIZFepBG7dvXv3T5YQOkcjIiKSUc2XyKvtiJcY74Gu67qu59kQ4zxzpHkOJSmdPUKIWfEyfTRN0zRN07QfsSN1jhCbiIjkxZpcc06m9Xg8Ho/H4/F4LJRXlMeEy2IhURnwiAKA6c65+fTec3cLK4YBdEblBDHA89YSAVAVANl08+lTxSa7r+TCrxnGf0HDMAzD+PLvJAD0cEUwOKNr7QSXV3AdenjbQXqIfqjpAHyfADTeUwoAvCgAfDdLgcabVIYP5kdMBIuqgpb6ZEUV+oYj9VOY7EQDHz1HaSiFGvg1gkdmqVkNMxf9paV3RoBHTbDssPbmrxFErBWPjw6NoysMoAGYABDiy5fIj49QR/4BrhFRGgo/IptIAa6lo5AUVD8EstIB555H0NcAhIbRwc1AkBPjKIA3+IZ09FNmNQAzA/h48xn6KRcj1dWoTsMvUjFu2/SWKQCtg+goBio5CBRZKMNL9BeqMDPR/7Ea2UopYKowqQD91dXVX/346kQ3JrrGUTOMSHB6M2Z6zlhjAVAAXy6ym3CHAvARvQFykU0FUK37FICfnkzvk3X2QAmPITiFyipLvxt9zIknH6KQgBsB+IBXmYDvrfoB/R/R6MtA41s19+8yvCAawWRbVxtQ0w5YGsVTGO0FWpnPH0zDV4JJZXhkAhhBtnXh3mcAX5Vqy4RHwB2idzMmWGNjYgrW/eVa2CwJV53aeM97j6wv7w1S/fcee2/4/W8ekeL33yNSP2Z7Fa+XiPSS1q6fJSWRnyXhUEkkxMzhhmAwUhIs2jCL6Pf80p8lfullUn/0VV3Xdd3u3GR8mxBbJb3qb3BtG4SYlSKB2y6eTQaLhBA7f4f8D4myS1juNU5G7HBs3yXki+RfmdfSctujbbFkmhzDMH7I8Fwey4NySs/lHmy3/L8WeeHB3RLS6JFPjPMkrxViXVKMT9zKKMGTbdKdcTFQO2bZoq/dsVC75sQWwS3YGIWIm6acFi3ZHEUhaZqSCCOXbjlxLo4o7tKRLVGj0OXbTl9IYk66fHTb8igWCQ==" alt="Mastercard" class="footer__payment-img" width="48" height="32">
+                    <img src="data:image/webp;base64,UklGRvwEAABXRUJQVlA4WAoAAAAwAAAAQwAAJwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDhMDgMAAC9DwAkQl+IgkiRFqj7mXrnHKODsPr8Nx40kKVLU4nGN/07el+8cR5LkKF0n0D29b168tAX4b8PF+oEBLEI2kpzsEdwY/Bv8R3+/3e3Q4eB63BvXTfwnFolnzvf7n/312WPdZn+/3rF1Mlmez85Dp79anq8fkX3r8tNaGI0bgFsARXxryACEBuAGkXCLf0TghuCfQeBbEBF0LYBI1xDxaEQ8GhE3ADfu41cRKxgQXAFkAApWsEJ55AcoWMGKWKGI5AwoYiJ5SskKBhQxUNS2bW3bbB1v5f6WA3Ymh8Ekk0xl5vbW+R9MLIMMBxDRfwZuGynKHg4sDHwiy36/+wQAAAAAAACAJ3d/zbLsX2Cbgr+yO2z/+uPBLvBwicc2HXbiBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2IVm61YqR2cDjq/1jirxgOQoqrR5Px0/+6gft9GOe8dxHDeTSuWomXbSlSSh+n8UmqJqv7R/FrWdhepJLfZ6OBwOhy+UDhCVReU4btZDrRYuegrQ0N8vpVE1Cafoh1q+nQ/D4dz18Sx0JHNnQz107EWKoRUaUTWNQqXpLMwdb3rL/CstVcVlolIct+uhkdyerRhzdvn56lE4PQnpcp47Cb3Zdmc/c4RwMihKHAZRVcpeqR0u8u28W+CNfiiFgcWfm1mgC3Faj8OlqNouJ0l0YD9cd+tnPyZz9+Q7h7dRy10OkqRXD52rcF2IEKIbuVsUQrknrYUQzn1/msu+o3ObmZwQQpybHJYW3b4Uq9He/K7SwVyov3/9vrCdggX98+1w+z3xfjTcKnNlO0vT5ig6z7tZonO2+jUaDrfFYg3kRb895iokt1/KNmL3PrdfwcYln6Yz+9VsVvLlZS4pwgYlH+b8C/JkQ8mbi33x+9HDTUTu1Xg4HK7F/T/XlHx7Pxe5dfkl+3sd3Ytct4H7nyzL7tx7UiBun1/Nzr0ZyeP/fssy" alt="Discover" class="footer__payment-img" width="48" height="32">
+                    <img src="data:image/webp;base64,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" alt="PayPal" class="footer__payment-img" width="48" height="32">
+                    <img src="./assets/image/wire.2a3de1b.BPcebjF9.webp" alt="Wire transfer" class="footer__payment-img" width="48" height="32">
+                </div>
+                <div class="footer__legal">
+                    <a href="/doc.html">Политика конфиденциальности</a>
+                    <span class="footer__legal-sep">|</span>
+                    <a href="/doc.html">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="modal-popup auth-popup" data-engram-popup="auth">
+
+    <div class="modal-popup__auth-claster">
+        <p class="modal-popup__title">Авторизация</p>
+        <p class="modal-popup__subtitle">Войдите в аккаунт, используя логин и пароль</p>
+
+        <form class="auth-form">
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="auth-email">Email / Имя пользователя</label>
+                <input class="auth-form__input" id="auth-email" type="text" placeholder="nathan.roberts@example.com" />
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="auth-password">Пароль</label>
+                <div class="auth-form__input-wrap">
+                    <input class="auth-form__input" id="auth-password" type="password" placeholder="••••••••••••" />
+                    <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-btn auth-btn--primary" data-engram-button="auth-confirm">Войти</div>
+            <span class="auth-form__link" data-engram-button="recovery">Забыли пароль?</span>
+        </form>
+
+        <p class="auth-form__separator">Или</p>
+
+        <div class="modal-popup__buttons-list">
+            <button class="auth-btn auth-btn--social" type="button">
+                <svg class="auth-btn__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                Войти через Google
+            </button>
+            <button class="auth-btn auth-btn--social" type="button">
+                <svg class="auth-btn__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Войти через Facebook
+            </button>
+        </div>
+
+        <p class="auth-form__signup">
+            Нет аккаунта? <span class="auth-form__link" data-engram-button="registr">Зарегистрироваться</span>
+        </p>
+    </div>
+
+</div>
+
+<div class="modal-popup auth-popup" data-engram-popup="auth-confirm">
+
+    <div class="modal-popup__confirm">
+        <div class="modal-popup__confirm-icon">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M35.9739 64.9918C19.8852 64.9918 6.79492 51.9022 6.79492 35.8128C6.79492 19.7234 19.8853 6.63379 35.9739 6.63379C43.1737 6.63379 50.0901 9.27906 55.4487 14.0821C56.1152 14.6797 56.1706 15.7047 55.5722 16.3712C54.9754 17.0393 53.9512 17.0931 53.2831 16.4963C48.5212 12.2268 42.3742 9.87587 35.9739 9.87587C21.6726 9.87587 10.037 21.5114 10.037 35.8128C10.037 50.1142 21.6725 61.7497 35.9739 61.7497C49.9776 61.7497 61.363 50.7965 61.8918 36.8141C61.9266 35.9197 62.6675 35.2065 63.573 35.2548C64.4674 35.2888 65.1656 36.0416 65.1308 36.936C64.5355 52.6684 51.7285 64.9918 35.9739 64.9918Z"
+                    fill="#22C67F" />
+                <path
+                    d="M67.5645 23.0303L62.9794 18.4453L38.3028 43.1219L21.1066 25.9259L16.5215 30.5109L38.3005 52.2897L38.3028 52.2875L38.305 52.2897L67.5645 23.0303Z"
+                    fill="#74E8AE" />
+            </svg>
+        </div>
+        <p class="modal-popup__confirm-text">Успешная авторизация</p>
+    </div>
+
+    <div class="modal-popup__auth-claster">
+        <p class="modal-popup__title">Авторизация</p>
+        <p class="modal-popup__subtitle">Войдите в аккаун испульзуя логин и пароль</p>
+        <div class="modal-popup__buttons-list">
+    
+        </div>
+    </div>
+
+</div>
+<div class="modal-popup auth-popup registr-popup" data-engram-popup="registr">
+
+    <div class="modal-popup__auth-claster">
+        <p class="modal-popup__title">Создать аккаунт</p>
+        <p class="modal-popup__subtitle">Заполните форму для регистрации</p>
+
+        <form class="auth-form">
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-name">Полное имя</label>
+                <input class="auth-form__input" id="registr-name" type="text" placeholder="Иван Иванов" />
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-email">Рабочий email</label>
+                <input class="auth-form__input" id="registr-email" type="email" placeholder="nathan.roberts@example.com" />
+                <p class="auth-form__hint">
+                    <svg class="auth-form__hint-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Используйте рабочий email
+                </p>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-password">Пароль</label>
+                <div class="auth-form__input-wrap">
+                    <input class="auth-form__input" id="registr-password" type="password" placeholder="••••••••••••" />
+                    <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-password-confirm">Подтвердите пароль</label>
+                <div class="auth-form__input-wrap">
+                    <input class="auth-form__input" id="registr-password-confirm" type="password" placeholder="••••••••••••" />
+                    <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__agree">
+                    <input type="checkbox" name="agree" class="auth-form__checkbox" checked />
+                    <span>Я согласен с <a class="auth-form__link" href="#">Условиями использования</a> и <a class="auth-form__link" href="#">Политикой конфиденциальности</a></span>
+                </label>
+            </div>
+            <button class="auth-btn auth-btn--primary" type="submit">Создать аккаунт</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="modal-popup auth-popup recovery-popup" data-engram-popup="recovery">
+
+    <div class="modal-popup__auth-claster">
+        <p class="modal-popup__title">Восстановление пароля</p>
+        <p class="modal-popup__subtitle">Введите email — мы отправим ссылку для сброса пароля</p>
+
+        <form class="auth-form">
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="recovery-email">Email</label>
+                <input class="auth-form__input" id="recovery-email" type="email" placeholder="nathan.roberts@example.com" />
+            </div>
+            <button class="auth-btn auth-btn--primary" type="submit">Отправить</button>
+        </form>
+
+        <p class="auth-form__signup">
+            Вспомнили пароль? <span class="auth-form__link" data-engram-button="auth">Войти</span>
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

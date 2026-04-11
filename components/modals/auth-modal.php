@@ -1,0 +1,114 @@
+<div id="auth" class="modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal-popup auth-popup" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+            <button type="button" class="engram-popup__close" data-micromodal-close aria-label="Закрыть"></button>
+            <div class="modal-popup__auth-claster">
+                <p class="modal-popup__title" id="auth-title">Авторизация</p>
+                <p class="modal-popup__subtitle">Войдите в аккаунт, используя логин и пароль</p>
+
+                <div class="auth-form__message js-auth-message" role="alert" aria-live="polite" hidden></div>
+
+                <div class="auth-form js-auth-form">
+                    <div class="auth-form__field">
+                        <label class="auth-form__label" for="auth-email">Email / Имя пользователя</label>
+                        <input class="auth-form__input" id="auth-email" type="text" placeholder="nathan.roberts@example.com" />
+                    </div>
+                    <div class="auth-form__field">
+                        <label class="auth-form__label" for="auth-password">Пароль</label>
+                        <div class="auth-form__input-wrap">
+                            <input class="auth-form__input" id="auth-password" type="password" placeholder="••••••••••••" />
+                            <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="auth-form__field">
+                        <label class="auth-form__agree">
+                            <input type="checkbox" id="auth-remember" class="auth-form__checkbox" value="1" />
+                            <span>Запомнить меня</span>
+                        </label>
+                    </div>
+                    <button class="auth-btn auth-btn--primary js-auth-submit" type="button">Войти</button>
+                    <span class="auth-form__link" data-engram-button="recovery">Забыли пароль?</span>
+                </div>
+
+                <p class="auth-form__separator">Или</p>
+
+                <div class="modal-popup__buttons-list">
+                    <button class="auth-btn auth-btn--social" type="button">
+                        <svg class="auth-btn__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        Войти через Google
+                    </button>
+                    <button class="auth-btn auth-btn--social" type="button">
+                        <svg class="auth-btn__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Войти через Facebook
+                    </button>
+                </div>
+
+                <p class="auth-form__signup">
+                    Нет аккаунта? <span class="auth-form__link" data-engram-button="registr">Зарегистрироваться</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sendBtn = document.querySelector('.js-auth-submit');
+        const userUsername = document.querySelector('#auth-email');
+        const userPassword = document.querySelector('#auth-password');
+        const userRemember = document.querySelector('#auth-remember');
+        const authMessage = document.querySelector('.js-auth-message');
+
+        const url = '/wp-json/custom-endpoints/v1/login';
+
+        sendBtn.addEventListener('click', function(event) {
+            serverRequestLogin();
+        });
+
+        async function serverRequestLogin() {
+            const userPayload = {
+                username: userUsername.value,
+                password: userPassword.value,
+                remember: userRemember.checked
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userPayload),
+                    credentials: 'same-origin'
+                });
+
+                const data = await response.json();
+
+                console.log(data);
+
+                authMessage.hidden = false;
+
+                if (response.ok && data.status === 'success') {
+                    authMessage.innerHTML = data.message;
+                    authMessage.classList.remove('error');
+                    if (data.redirect) {
+                        setTimeout(function() {
+                            window.location.href = data.redirect;
+                        }, 1000);
+                    }
+                } else {
+                    authMessage.classList.add('error');
+                    authMessage.innerHTML = data.message || (data.data && data.data.params ? Object.values(data.data.params).flat().join(', ') : (data.code || 'Ошибка входа'));
+                }
+            } catch (error) {
+                authMessage.hidden = false;
+                authMessage.classList.add('error');
+                authMessage.innerHTML = 'Ошибка соединения. Попробуйте снова.';
+                console.error('Error:', error);
+            }
+        }
+    });
+</script>
