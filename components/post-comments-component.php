@@ -14,6 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( post_password_required() ) {
 	return;
 }
+
+$travel_moderation_notice = false;
+if ( ! empty( $_GET['unapproved'] ) && ! empty( $_GET['moderation-hash'] ) ) {
+	$travel_cid   = (int) $_GET['unapproved'];
+	$travel_cmt   = get_comment( $travel_cid );
+	$travel_hash  = sanitize_text_field( wp_unslash( $_GET['moderation-hash'] ) );
+	$travel_post  = (int) get_the_ID();
+	if ( $travel_cmt && $travel_hash && hash_equals( $travel_hash, wp_hash( $travel_cmt->comment_date_gmt ) ) && (int) $travel_cmt->comment_post_ID === $travel_post ) {
+		$travel_moderation_notice = true;
+	}
+}
 ?>
 <div class="post-comments" aria-labelledby="post-comments-heading">
 	<h2 id="post-comments-heading" class="post-comments__title">
@@ -62,6 +73,12 @@ if ( post_password_required() ) {
 		}
 		?>
 
+	<?php endif; ?>
+
+	<?php if ( $travel_moderation_notice ) : ?>
+		<p class="post-comments__notice" role="status">
+			<?php esc_html_e( 'Ваш комментарий отправлен и будет опубликован после проверки администратором.', 'travel' ); ?>
+		</p>
 	<?php endif; ?>
 
 	<?php if ( is_user_logged_in() && comments_open() ) : ?>
