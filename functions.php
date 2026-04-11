@@ -278,10 +278,15 @@ add_action('wp_enqueue_scripts', function() {
     if ( ! $css_file ) {
         $all_css = glob($path . '/assets/style/*.css') ?: [];
         foreach ( $all_css as $f ) {
-            if ( basename( $f ) !== 'custom-styles.css' ) {
-                $css_file = $f;
-                break;
+            $base = basename( $f );
+            if ( $base === 'custom-styles.css' ) {
+                continue;
             }
+            if ( strpos( $base, 'tourCreateForm.' ) === 0 ) {
+                continue;
+            }
+            $css_file = $f;
+            break;
         }
     }
     if ( $css_file ) {
@@ -301,10 +306,14 @@ add_action('wp_enqueue_scripts', function() {
         $all_js = glob($path . '/assets/js/*.js') ?: [];
         foreach ( $all_js as $f ) {
             $name = basename( $f );
-            if ( $name !== 'all-tours-script.js' && $name !== 'admin-taxonomy-hierarchical.js' ) {
-                $js_file = $f;
-                break;
+            if ( $name === 'all-tours-script.js' || $name === 'admin-taxonomy-hierarchical.js' ) {
+                continue;
             }
+            if ( strpos( $name, 'tourCreateForm.' ) === 0 ) {
+                continue;
+            }
+            $js_file = $f;
+            break;
         }
     }
     if ( $js_file ) {
@@ -317,6 +326,84 @@ add_action('wp_enqueue_scripts', function() {
         );
     }
 }, 10);
+
+/**
+ * Vite-сборка main.*.js — ES-модуль (import(), import.meta.url). Без type="module" браузер не выполняет бандл.
+ */
+add_filter(
+	'script_loader_tag',
+	static function ( $tag, $handle ) {
+		if ( 'travel-main' !== $handle ) {
+			return $tag;
+		}
+		// Убрать type="text/javascript" (его иногда добавляет wp_get_script_tag), иначе type="module" не подставить.
+		$tag = preg_replace( '/\stype=["\'][^"\']*["\']\s*/', ' ', $tag, 1 );
+		return preg_replace( '/<script\s+/', '<script type="module" crossorigin ', $tag, 1 );
+	},
+	10,
+	3
+);
+
+/**
+ * Форма создания тура (Vite-бандл): только страница с шаблоном user-guide-tour-create.
+ */
+add_action(
+    'wp_enqueue_scripts',
+    function () {
+        if ( ! is_page_template( 'pages/user-guide-tour-create.php' ) ) {
+            return;
+        }
+        $uri  = get_template_directory_uri();
+        $path = get_template_directory();
+
+        $css_glob = glob( $path . '/assets/style/tourCreateForm.*.css' ) ?: array();
+        $js_glob  = glob( $path . '/assets/js/tourCreateForm.*.js' ) ?: array();
+
+        if ( ! empty( $css_glob[0] ) && is_readable( $css_glob[0] ) ) {
+            $css_deps = wp_style_is( 'travel-main', 'registered' ) ? array( 'travel-main' ) : array();
+            wp_enqueue_style(
+                'travel-tour-create-form',
+                $uri . '/assets/style/' . basename( $css_glob[0] ),
+                $css_deps,
+                filemtime( $css_glob[0] )
+            );
+        }
+    },
+    20
+);
+
+/**
+ * tourCreateForm.*.js собран как ES-модуль (в конце файла `export { … }`).
+ * Обычный <script src> без type="module" даёт синтаксическую ошибку и код не выполняется.
+ * Экспортируется initTourCreateForm — явно импортируем и вызываем в footer.
+ */
+add_action(
+    'wp_footer',
+    function () {
+        if ( ! is_page_template( 'pages/user-guide-tour-create.php' ) ) {
+            return;
+        }
+        $uri     = get_template_directory_uri();
+        $path    = get_template_directory();
+        $js_glob = glob( $path . '/assets/js/tourCreateForm.*.js' ) ?: array();
+        if ( empty( $js_glob[0] ) || ! is_readable( $js_glob[0] ) ) {
+            return;
+        }
+        $js_ver = filemtime( $js_glob[0] );
+        $js_url = esc_url(
+            add_query_arg(
+                'ver',
+                (string) $js_ver,
+                $uri . '/assets/js/' . basename( $js_glob[0] )
+            )
+        );
+        echo '<script type="module">';
+        echo 'import { initTourCreateForm } from "' . $js_url . '";';
+        echo 'initTourCreateForm();';
+        echo '</script>';
+    },
+    99
+);
 
 // Кастомные стили — подключаются последними и перезаписывают остальные
 add_action('wp_enqueue_scripts', function() {

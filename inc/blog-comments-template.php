@@ -34,6 +34,7 @@ function travel_blog_comment_callback( $comment, $args, $depth ) {
 			);
 			?>
 			<div class="post-comment__body">
+				<?php echo get_comment_author($comment); ?>
 				<h3 class="post-comment__name"><?php echo esc_html( get_comment_author( $comment ) ); ?></h3>
 				<div class="post-comment__text"><?php comment_text( $comment ); ?></div>
 			</div>
