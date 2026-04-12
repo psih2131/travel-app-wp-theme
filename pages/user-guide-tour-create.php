@@ -104,6 +104,30 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
 $user_guide_tours_url = home_url( '/user-guide-tours/' );
 $status_post_create = '';
 
+$travel_tour_terms_direction = get_terms(
+	array(
+		'taxonomy'   => 'direction',
+		'hide_empty' => false,
+		'orderby'    => 'name',
+		'order'      => 'ASC',
+	)
+);
+if ( is_wp_error( $travel_tour_terms_direction ) ) {
+	$travel_tour_terms_direction = array();
+}
+
+$travel_tour_terms_rubric = get_terms(
+	array(
+		'taxonomy'   => 'tour-rubric',
+		'hide_empty' => false,
+		'orderby'    => 'name',
+		'order'      => 'ASC',
+	)
+);
+if ( is_wp_error( $travel_tour_terms_rubric ) ) {
+	$travel_tour_terms_rubric = array();
+}
+
 if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_form_dump_test'], $_POST['tour_title'] ) ) {
 	$post_id = wp_insert_post(
 		array(
@@ -116,11 +140,69 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
 	);
 	if ( ! is_wp_error( $post_id ) && $post_id > 0 ) {
 		$status_post_create = $post_id;
+		$p                  = wp_unslash( $_POST );
+
+		$travel_tax_direction_ids = array();
+		if ( ! empty( $p['tax_direction'] ) && is_array( $p['tax_direction'] ) ) {
+			foreach ( $p['tax_direction'] as $tid_raw ) {
+				$tid = absint( $tid_raw );
+				if ( ! $tid ) {
+					continue;
+				}
+				$term = get_term( $tid, 'direction' );
+				if ( $term && ! is_wp_error( $term ) ) {
+					$travel_tax_direction_ids[] = $tid;
+				}
+			}
+			$travel_tax_direction_ids = array_values( array_unique( $travel_tax_direction_ids ) );
+		}
+		wp_set_object_terms( $post_id, $travel_tax_direction_ids, 'direction' );
+
+		$travel_tax_rubric_ids = array();
+		if ( ! empty( $p['tax_tour_rubric'] ) && is_array( $p['tax_tour_rubric'] ) ) {
+			foreach ( $p['tax_tour_rubric'] as $tid_raw ) {
+				$tid = absint( $tid_raw );
+				if ( ! $tid ) {
+					continue;
+				}
+				$term = get_term( $tid, 'tour-rubric' );
+				if ( $term && ! is_wp_error( $term ) ) {
+					$travel_tax_rubric_ids[] = $tid;
+				}
+			}
+			$travel_tax_rubric_ids = array_values( array_unique( $travel_tax_rubric_ids ) );
+		}
+		wp_set_object_terms( $post_id, $travel_tax_rubric_ids, 'tour-rubric' );
+
 		if ( function_exists( 'update_field' ) ) {
-			$p = wp_unslash( $_POST );
 			update_field( 'prodolzhitelnost_tura', sanitize_text_field( $p['tour_duration'] ?? '' ), $post_id );
 			update_field( 'korotkoe_opisanie_kartochki', sanitize_textarea_field( $p['tour_short_description'] ?? '' ), $post_id );
 			update_field( 'osnovnaya_czena', sanitize_text_field( $p['stoimost_tura'] ?? '' ), $post_id );
+
+			// ACF «Количество людей» (radio): значения формы → ключи choices в ACF.
+			$travel_group_size_map = array(
+				'1'       => '1',
+				'3_5'     => '3 – 5',
+				'5_10'    => '5 – 10',
+				'10_15'   => '10 – 15',
+				'15_20'   => '15 – 20',
+				'over_20' => '>20',
+			);
+			$travel_group_size_raw = isset( $p['tour_group_size'] ) ? sanitize_text_field( $p['tour_group_size'] ) : '';
+			if ( $travel_group_size_raw !== '' && isset( $travel_group_size_map[ $travel_group_size_raw ] ) ) {
+				update_field( 'field_69db2c5fa6ccc', $travel_group_size_map[ $travel_group_size_raw ], $post_id );
+			}
+
+			// ACF «Тип цены» (radio): tour_price_basis → ключи choices в ACF.
+			$travel_price_basis_map = array(
+				'group'  => 'Цена за группу',
+				'person' => 'Цена за человека',
+			);
+			$travel_price_basis_raw = isset( $p['tour_price_basis'] ) ? sanitize_text_field( $p['tour_price_basis'] ) : '';
+			$travel_tip_czeny       = isset( $travel_price_basis_map[ $travel_price_basis_raw ] )
+				? $travel_price_basis_map[ $travel_price_basis_raw ]
+				: $travel_price_basis_map['person'];
+			update_field( 'field_69db2be5af738', $travel_tip_czeny, $post_id );
 
 			update_field(
 				'field_69b035c6e6cbe',
@@ -499,6 +581,104 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
                                     <label class="user-tour-create-form__label" for="tour-title">Название тура</label>
                                     <input class="user-tour-create-form__input" id="tour-title" name="tour_title" type="text" autocomplete="off" required />
                                 </div>
+
+								<div class="user-tour-create-form__field user-tour-create-form__field--full user-tour-create-taxonomy js-tour-taxonomy" data-taxonomy="direction">
+                                    <span class="user-tour-create-form__label">Направления тура</span>
+                                    <p class="user-tour-create-form__hint user-tour-create-form__hint--taxonomy">Можно выбрать несколько направлений из списка ниже.</p>
+                                    <label class="user-tour-create-taxonomy__search-label" for="tour-tax-direction-search">Поиск по направлениям</label>
+                                    <input
+                                        class="user-tour-create-form__input user-tour-create-taxonomy__search js-tour-taxonomy-search"
+                                        id="tour-tax-direction-search"
+                                        type="search"
+                                        autocomplete="off"
+                                        placeholder="Начните вводить название…"
+                                    />
+                                    <div class="user-tour-create-taxonomy__scroll">
+                                        <div class="user-tour-create-taxonomy__list js-tour-taxonomy-list" role="group" aria-label="Направления">
+											<?php if ( empty( $travel_tour_terms_direction ) ) : ?>
+												<p class="user-tour-create-form__hint">Нет терминов в таксономии «Направления». Добавьте их в админке WordPress.</p>
+											<?php else : ?>
+												<?php foreach ( $travel_tour_terms_direction as $travel_term ) : ?>
+													<?php
+													if ( ! $travel_term instanceof WP_Term ) {
+														continue;
+													}
+													$travel_dir_indent = $travel_term->parent ? '— ' : '';
+													?>
+													<label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+														<input type="checkbox" name="tax_direction[]" value="<?php echo esc_attr( (string) $travel_term->term_id ); ?>" />
+														<span class="user-tour-create-taxonomy__item-text"><?php echo esc_html( $travel_dir_indent . $travel_term->name ); ?></span>
+													</label>
+												<?php endforeach; ?>
+											<?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="user-tour-create-form__field user-tour-create-form__field--full user-tour-create-taxonomy js-tour-taxonomy" data-taxonomy="tour-rubric">
+                                    <span class="user-tour-create-form__label">Рубрики туров</span>
+                                    <p class="user-tour-create-form__hint user-tour-create-form__hint--taxonomy">Можно выбрать несколько рубрик из списка ниже.</p>
+                                    <label class="user-tour-create-taxonomy__search-label" for="tour-tax-rubric-search">Поиск по рубрикам</label>
+                                    <input
+                                        class="user-tour-create-form__input user-tour-create-taxonomy__search js-tour-taxonomy-search"
+                                        id="tour-tax-rubric-search"
+                                        type="search"
+                                        autocomplete="off"
+                                        placeholder="Начните вводить название…"
+                                    />
+                                    <div class="user-tour-create-taxonomy__scroll">
+                                        <div class="user-tour-create-taxonomy__list js-tour-taxonomy-list" role="group" aria-label="Рубрики туров">
+											<?php if ( empty( $travel_tour_terms_rubric ) ) : ?>
+												<p class="user-tour-create-form__hint">Нет терминов в таксономии «Рубрики туров». Добавьте их в админке WordPress.</p>
+											<?php else : ?>
+												<?php foreach ( $travel_tour_terms_rubric as $travel_term ) : ?>
+													<?php
+													if ( ! $travel_term instanceof WP_Term ) {
+														continue;
+													}
+													$travel_rub_indent = $travel_term->parent ? '— ' : '';
+													?>
+													<label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+														<input type="checkbox" name="tax_tour_rubric[]" value="<?php echo esc_attr( (string) $travel_term->term_id ); ?>" />
+														<span class="user-tour-create-taxonomy__item-text"><?php echo esc_html( $travel_rub_indent . $travel_term->name ); ?></span>
+													</label>
+												<?php endforeach; ?>
+											<?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="user-tour-create-form__field user-tour-create-form__field--full">
+                                    <span class="user-tour-create-form__label" id="tour-group-size-label">Размер группы</span>
+                                    <div class="user-tour-create-group-size" role="radiogroup" aria-labelledby="tour-group-size-label">
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="1" />
+                                            <span class="user-tour-create-group-size__text">1</span>
+                                        </label>
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="3_5" />
+                                            <span class="user-tour-create-group-size__text">3&nbsp;–&nbsp;5</span>
+                                        </label>
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="5_10" />
+                                            <span class="user-tour-create-group-size__text">5&nbsp;–&nbsp;10</span>
+                                        </label>
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="10_15" />
+                                            <span class="user-tour-create-group-size__text">10&nbsp;–&nbsp;15</span>
+                                        </label>
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="15_20" />
+                                            <span class="user-tour-create-group-size__text">15&nbsp;–&nbsp;20</span>
+                                        </label>
+                                        <label class="user-tour-create-group-size__option">
+                                            <input type="radio" name="tour_group_size" value="over_20" />
+                                            <span class="user-tour-create-group-size__text">&gt;20</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
                                 <div class="user-tour-create-form__field user-tour-create-form__field--full">
                                     <span class="user-tour-create-form__label">Фоновое изображение</span>
                                     <p class="user-tour-create-form__formats">JPG, PNG или WebP</p>
@@ -631,14 +811,28 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
                             <div class="user-tour-create-price-excludes js-tour-price-excludes-list"></div>
                         </div>
     
-                        <div class="user-tour-create-form__section user-tour-create-form__section--tour-cost">
+
+						<div class="user-tour-create-form__section user-tour-create-form__section--tour-cost">
                             <div class="user-tour-create-tour-cost">
                                 <h2 class="user-tour-create-tour-cost__title">Стоимость</h2>
                                 <div class="user-tour-create-tour-cost__fields">
+                                    <div class="user-tour-create-tour-cost__basis">
+                                        <span class="user-tour-create-form__label" id="tour-price-basis-label">Тип цены</span>
+                                        <div class="user-tour-create-tour-cost__segment" role="radiogroup" aria-labelledby="tour-price-basis-label">
+                                            <label class="user-tour-create-tour-cost__segment-btn">
+                                                <input type="radio" name="tour_price_basis" value="group" />
+                                                <span class="user-tour-create-tour-cost__segment-text">Цена за группу</span>
+                                            </label>
+                                            <label class="user-tour-create-tour-cost__segment-btn">
+                                                <input type="radio" name="tour_price_basis" value="person" checked />
+                                                <span class="user-tour-create-tour-cost__segment-text">Цена за человека</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                     <div class="user-tour-create-form__field user-tour-create-form__field--full">
                                         <label class="user-tour-create-form__label" for="tour-stoimost-tura">Стоимость тура</label>
                                         <input
-                                            class="user-tour-create-form__input"
+										    class="user-tour-create-form__input"
                                             id="tour-stoimost-tura"
                                             name="stoimost_tura"
                                             type="text"
@@ -650,6 +844,8 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
                                 </div>
                             </div>
                         </div>
+
+						
     
                         <div class="user-tour-create-form__actions">
                             <button type="submit" class="user-tour-create-form__submit">Сохранить черновик</button>

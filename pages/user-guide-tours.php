@@ -84,7 +84,14 @@ $tours_query = new WP_Query(
                         
                             <div class="user-tour-card__info">
                                 <p class="user-tour-card__title"><?php the_title(); ?></p>
-                                <p class="user-tour-card__subtitle"><?php the_field( 'korotkoe_opisanie_kartochki' ); ?></p>
+                                <p class="user-tour-card__subtitle"><?php
+                                    $travel_card_desc = function_exists( 'get_field' ) ? get_field( 'korotkoe_opisanie_kartochki' ) : '';
+                                    $travel_card_desc = is_string( $travel_card_desc ) ? wp_strip_all_tags( $travel_card_desc ) : '';
+                                    if ( $travel_card_desc !== '' && function_exists( 'mb_strlen' ) && mb_strlen( $travel_card_desc, 'UTF-8' ) > 150 ) {
+                                        $travel_card_desc = mb_substr( $travel_card_desc, 0, 100, 'UTF-8' ) . '…';
+                                    }
+                                    echo esc_html( $travel_card_desc );
+                                ?></p>
                             </div>
                         
                             <div class="user-tour-card__duration">
