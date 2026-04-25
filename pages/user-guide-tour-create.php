@@ -90,6 +90,35 @@ if ( ! function_exists( 'travel_user_tour_normalize_gallery_files' ) ) {
 	}
 }
 
+if ( ! function_exists( 'travel_user_tour_normalize_acf_date_dmY' ) ) {
+	/**
+	 * Строка даты из формы (flatpickr: Y-m-d; вручную: d/m/Y, d.m.Y) → формат ACF date_picker (d/m/Y).
+	 *
+	 * @param string $raw Сырое значение.
+	 * @return string Пустая строка, если распознать не удалось.
+	 */
+	function travel_user_tour_normalize_acf_date_dmY( $raw ) {
+		$raw = trim( (string) $raw );
+		if ( '' === $raw ) {
+			return '';
+		}
+		$tz = function_exists( 'wp_timezone' ) ? wp_timezone() : new DateTimeZone( 'UTC' );
+		if ( preg_match( '/^\d{4}-\d{2}-\d{2}$/', $raw ) ) {
+			$dt = DateTimeImmutable::createFromFormat( '!Y-m-d', $raw, $tz );
+			return $dt ? $dt->format( 'd/m/Y' ) : '';
+		}
+		if ( preg_match( '/^\d{1,2}\/\d{1,2}\/\d{4}$/', $raw ) ) {
+			$dt = DateTimeImmutable::createFromFormat( 'd/m/Y', $raw, $tz );
+			return $dt ? $dt->format( 'd/m/Y' ) : '';
+		}
+		if ( preg_match( '/^\d{1,2}\.\d{1,2}\.\d{4}$/', $raw ) ) {
+			$dt = DateTimeImmutable::createFromFormat( 'd.m.Y', $raw, $tz );
+			return $dt ? $dt->format( 'd/m/Y' ) : '';
+		}
+		return '';
+	}
+}
+
 $travel_form_submitted_dump = null;
 if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_form_dump_test'] ) ) {
 	$post_for_dump = wp_unslash( $_POST );
@@ -203,6 +232,33 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
 				? $travel_price_basis_map[ $travel_price_basis_raw ]
 				: $travel_price_basis_map['person'];
 			update_field( 'field_69db2be5af738', $travel_tip_czeny, $post_id );
+
+			// ACF «Доступные даты»: repeater dostupnye_daty; форма — tour_available_dates[i][date], [price] (flatpickr отдаёт Y-m-d).
+			$acf_dostup_daty_rep = 'field_69db55ceed977';
+			$acf_dostup_data     = 'field_69db55ecde8ad';
+			$acf_dostup_czena    = 'field_69db5609de8ae';
+			$dostup_daty_rows    = array();
+			$dostup_daty_post    = isset( $p['tour_available_dates'] ) && is_array( $p['tour_available_dates'] ) ? $p['tour_available_dates'] : array();
+			foreach ( $dostup_daty_post as $dostup_row ) {
+				if ( ! is_array( $dostup_row ) ) {
+					continue;
+				}
+				$date_dmY = travel_user_tour_normalize_acf_date_dmY( isset( $dostup_row['date'] ) ? (string) $dostup_row['date'] : '' );
+				$price_raw = isset( $dostup_row['price'] ) ? (string) $dostup_row['price'] : '';
+				$price_clean = preg_replace( '/[^\d.,-]/', '', $price_raw );
+				$price_clean = str_replace( ',', '.', $price_clean );
+				$czena       = ( '' !== $price_clean && is_numeric( $price_clean ) ) ? (float) $price_clean : null;
+				if ( '' === $date_dmY || null === $czena ) {
+					continue;
+				}
+				$dostup_daty_rows[] = array(
+					$acf_dostup_data  => $date_dmY,
+					$acf_dostup_czena => $czena,
+				);
+			}
+			if ( $dostup_daty_rows ) {
+				update_field( $acf_dostup_daty_rep, $dostup_daty_rows, $post_id );
+			}
 
 			update_field(
 				'field_69b035c6e6cbe',
@@ -845,6 +901,16 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
                             </div>
                         </div>
 
+
+						<div class="user-tour-create-form__section user-tour-create-form__section--available-dates">
+                            <div class="user-tour-create-form__section-head user-tour-create-form__section-head--available-dates">
+                                <h2 class="user-tour-create-form__section-title">Доступные даты</h2>
+                                <button type="button" class="user-tour-create-form__add-btn js-tour-add-available-date">Добавить дату</button>
+                            </div>
+                            <p class="user-tour-create-form__hint">Для каждой даты укажите цену выезда. Можно добавить несколько строк.</p>
+                            <div class="user-tour-create-available-dates js-tour-available-dates-list"></div>
+                        </div>
+
 						
     
                         <div class="user-tour-create-form__actions">
@@ -875,6 +941,34 @@ if ( 'POST' === ( $_SERVER['REQUEST_METHOD'] ?? '' ) && isset( $_POST['travel_fo
                 placeholder="Например: трансфер из аэропорта"
             />
             <button type="button" class="user-tour-create-price-include-row__remove js-tour-price-include-remove" aria-label="Удалить пункт">Удалить</button>
+        </div>
+    </template>
+    
+    <template id="tour-available-date-row-template">
+        <div class="user-tour-create-available-date-row js-tour-available-date-row">
+            <label class="user-tour-create-available-date-row__col">
+                <span class="user-tour-create-form__label">Дата</span>
+                <input
+                    type="text"
+                    class="user-tour-create-form__input user-tour-create-available-date-row__date js-tour-available-date-input"
+                    name="tour_available_dates[0][date]"
+                    autocomplete="off"
+                    placeholder="Выберите дату"
+                />
+            </label>
+            <label class="user-tour-create-available-date-row__col">
+                <span class="user-tour-create-form__label">Цена</span>
+                <input
+                    type="text"
+                    class="user-tour-create-form__input user-tour-create-available-date-row__price js-tour-available-date-price"
+                    name="tour_available_dates[0][price]"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    autocomplete="off"
+                    placeholder="Например: 45000"
+                />
+            </label>
+            <button type="button" class="user-tour-create-available-date-row__remove js-tour-available-date-remove" aria-label="Удалить строку с датой">Удалить</button>
         </div>
     </template>
     

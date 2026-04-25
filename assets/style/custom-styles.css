@@ -185,3 +185,142 @@
     border: none;
 }
 
+/* Бронирование гида: статус «В ожидании» */
+.user-guide-booking-card__status--pending {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.user-booking-detail__status--pending {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+/* Бронирование гида: статус «Отклонено» */
+.user-guide-booking-card__status--declined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #9b2c2c;
+    background-color: #ffeaea;
+}
+
+.user-booking-detail__status--declined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #9b2c2c;
+    background-color: #ffeaea;
+}
+
+/* Заказы пользователя: плашки статусов */
+.user-order-card__status--pending {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.user-order-card__status--confirmed {
+    color: #1a5d4a;
+    background-color: #e8f5f0;
+}
+
+.user-order-card__status--declined {
+    color: #9b2c2c;
+    background-color: #ffeaea;
+}
+
+/* Карточка бронирования пользователя: плашки статусов */
+.user-booking-card__status--pending {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.user-booking-card__status--cancelled {
+    color: #9b2c2c;
+    background-color: #ffeaea;
+}
+
+/* Деталка заказа пользователя: плашки статуса */
+.order-detail__status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.order-detail__status--pending {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.order-detail__status--confirmed {
+    color: #1a5d4a;
+    background-color: #e8f5f0;
+}
+
+.order-detail__status--cancelled {
+    color: #9b2c2c;
+    background-color: #ffeaea;
+}
+
+/* Деталка заказа: сообщение «В ожидании» */
+.order-detail__message--pending {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+/* Решение по заявке уже принято (без кнопок) */
+.user-booking-detail__decision-final {
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 40em;
+}
+
+.user-booking-detail__decision-final--approved {
+    color: #1a5d4a;
+    background-color: #e8f5f0;
+}
+
+.user-booking-detail__decision-final--declined {
+    color: #5c3d3d;
+    background-color: #f7f0f0;
+}
+

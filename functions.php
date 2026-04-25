@@ -11,6 +11,8 @@ require_once $url_theme . '/controllers/taxonomy-hierarchical-meta.php';
 //roles controller
 require_once $url_theme . '/controllers/user-role-controller.php';
 
+// автоодобрение комментов к брони (tour-bookings)
+require_once $url_theme . '/controllers/comment-approve-tour-bookings.php';
 
 // REST API: эндпоинт регистрации пользователя
 require_once $url_theme . '/endpoints/register.php';
@@ -63,10 +65,71 @@ function travel_blog_option_comments_per_page( $value ) {
 }
 add_filter( 'option_comments_per_page', 'travel_blog_option_comments_per_page' );
 
+/**
+ * Обрезает текст до $max символов (UTF-8). Длиннее — обрезка + суффикс.
+ *
+ * @param string $text   Входной текст.
+ * @param int    $max    Максимальная длина.
+ * @param string $suffix Суффикс при обрезке.
+ * @return string
+ */
+if ( ! function_exists( 'travel_truncate_text' ) ) {
+	function travel_truncate_text( $text, $max = 1000, $suffix = '…' ) {
+		if ( ! is_string( $text ) || '' === $text ) {
+			return is_string( $text ) ? $text : '';
+		}
+		$enc = 'UTF-8';
+		if ( function_exists( 'mb_strlen' ) && function_exists( 'mb_substr' ) ) {
+			if ( mb_strlen( $text, $enc ) <= $max ) {
+				return $text;
+			}
+			return mb_substr( $text, 0, $max, $enc ) . $suffix;
+		}
+		return strlen( $text ) > $max ? substr( $text, 0, $max ) . $suffix : $text;
+	}
+}
 
-
-
-
+/**
+ * Статус брони ACF `status_broniryvaniya`: плашка, финальное ли решение.
+ * Варианты: «В ожидании», «Одобрено», «Отклонено».
+ *
+ * @param int $post_id ID поста tour-bookings.
+ * @return array{ label: string, mod: string, is_final: bool, raw: string }
+ */
+if ( ! function_exists( 'travel_tour_booking_bron_status_from_acf' ) ) {
+	function travel_tour_booking_bron_status_from_acf( $post_id ) {
+		$default = array(
+			'label'    => __( 'В ожидании', 'travel' ),
+			'mod'      => 'pending',
+			'is_final' => false,
+			'raw'      => '',
+		);
+		$post_id = (int) $post_id;
+		if ( $post_id < 1 ) {
+			return $default;
+		}
+		$raw = function_exists( 'get_field' ) ? get_field( 'status_broniryvaniya', $post_id ) : null;
+		if ( is_array( $raw ) ) {
+			$raw = isset( $raw['value'] ) ? (string) $raw['value'] : ( isset( $raw['label'] ) ? (string) $raw['label'] : '' );
+		} else {
+			$raw = is_string( $raw ) ? trim( $raw ) : '';
+		}
+		$map = array(
+			'В ожидании' => array( 'mod' => 'pending', 'label' => __( 'В ожидании', 'travel' ), 'is_final' => false ),
+			'Одобрено'   => array( 'mod' => 'confirmed', 'label' => __( 'Одобрено', 'travel' ), 'is_final' => true ),
+			'Отклонено'  => array( 'mod' => 'declined', 'label' => __( 'Отклонено', 'travel' ), 'is_final' => true ),
+		);
+		if ( $raw !== '' && isset( $map[ $raw ] ) ) {
+			return array(
+				'label'    => $map[ $raw ]['label'],
+				'mod'      => $map[ $raw ]['mod'],
+				'is_final' => $map[ $raw ]['is_final'],
+				'raw'      => $raw,
+			);
+		}
+		return $default;
+	}
+}
 
 //регистрация страници с опциями ACF
 

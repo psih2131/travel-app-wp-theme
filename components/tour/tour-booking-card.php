@@ -72,10 +72,14 @@
         }
         ?>
 
-        <p class="booking-card__offer-price"><span>$<?php the_field('osnovnaya_czena'); ?> <?php the_field('tip_czeny'); ?></span> / за группу</p>
+        <p class="booking-card__offer-price"><span>$<?php the_field('osnovnaya_czena'); ?></span> / <?php the_field('tip_czeny'); ?> </p>
         <p class="booking-card__offer-price-tax-info">(Цена включает налоги и сборы за бронирование)</p>
 
-        <button class="booking-card__offer-reserve-btn offer-reserve-btn">
+        
+        <?php
+        if ( is_user_logged_in() ) {
+            ?>
+        <a href="<?php echo esc_url( home_url( '/booking-page?tour_id=' . get_the_ID() ) ); ?>" class="booking-card__offer-reserve-btn offer-reserve-btn">
             <span class="offer-reserve-btn__text">Выбрать даты</span>
             <span class="offer-reserve-btn__icon-wrapper">
                 <svg width="145" height="145" viewBox="0 0 145 145" fill="none"
@@ -92,6 +96,16 @@
                     <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
                 </svg>
             </span>
-        </button>
+        </a>
+            <?php
+        } else {
+            ?>
+            <div class="booking-card__need-login">
+                <p class="booking-card__need-login-text">Для бронирования необходимо авторизоваться</p>
+                <button type="button" class="header__auth-btn" data-engram-button="auth">Войти</button>
+            </div>
+            <?php
+        }
+        ?>
     </div>
 </div>

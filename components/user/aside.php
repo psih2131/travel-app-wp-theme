@@ -4,6 +4,7 @@ $user_orders_url = home_url( '/user-orders/' );
 $user_be_guide_url = home_url( '/user-be-guide/' );
 $user_guide_list_url = home_url( '/user-guide-tours/' );
 $user_guide_create_url = home_url( '/user-guide-tour-create/' );
+$user_guide_bookings_url = home_url( '/user-guide-bookings/' );
 
 
 $current_user_aside_page = get_query_var( 'current_user_aside_page', '' );
@@ -11,7 +12,7 @@ $is_user_home_active = ( $current_user_aside_page === 'user-home' );
 $is_user_orders_active = ( $current_user_aside_page === 'user-orders' );
 $is_user_be_guide_active = ( $current_user_aside_page === 'user-be-guide' );
 $is_user_guide_list_active = ( $current_user_aside_page === 'user-guide-tours-list' );
-
+$is_user_guide_bookings_active = ( $current_user_aside_page === 'user-guide-bookings' );
 
 
 $current_user = wp_get_current_user();
@@ -44,6 +45,7 @@ $current_user_role = $current_user->roles[0];
 
                 <?php if ( $current_user_role === 'guide' ) : ?>
                 <li><a class="user-aside__link<?php echo $is_user_guide_list_active ? ' user-aside__link--active' : ''; ?>" href="<?php echo esc_url( $user_guide_list_url ); ?>">Мои туры</a></li>
+                <li><a class="user-aside__link<?php echo $is_user_guide_bookings_active ? ' user-aside__link--active' : ''; ?>" href="<?php echo esc_url( $user_guide_bookings_url ); ?>">Бронирования</a></li>
                 <?php endif; ?>
 
             </ul>

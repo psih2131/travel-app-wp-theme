@@ -11,6 +11,22 @@ if ( ! is_user_logged_in() ) {
 get_header();
 
 set_query_var( 'current_user_aside_page', 'user-orders' );
+$user_bookings_query = new WP_Query(
+	array(
+		'post_type'      => 'tour-bookings',
+		'post_status'    => 'any',
+		'posts_per_page' => -1,
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'   => 'id_polzovatelya',
+				'value' => (string) get_current_user_id(),
+			),
+		),
+	)
+);
+
 ?>
 <main class="main">
     <section class="user-account">
@@ -21,31 +37,29 @@ set_query_var( 'current_user_aside_page', 'user-orders' );
                 <?php get_template_part( 'components/user/aside' ); ?>
 
                 
-                <div class="user-account__user-orders">
-                    <h1 class="user-orders__title">Мои заказы</h1>
+                <div class="user-account__user-bookings user-bookings">
+                    <h1 class="user-bookings__title">Мои бронирования</h1>
     
-                    <div class="user-orders__list">
-                        
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-                        
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-
-                        <!-- user-card-order -->
-                        <?php get_template_part( 'components/user/user-card-order' ); ?>
-                                    
+                    <div class="user-bookings__list">
+                    <?php
+						if ( $user_bookings_query->have_posts() ) :
+							while ( $user_bookings_query->have_posts() ) :
+								$user_bookings_query->the_post();
+								get_template_part( 'components/user/user-card-order' );
+							endwhile;
+							wp_reset_postdata();
+						else :
+							?>
+						<p class="user-orders__empty"><?php esc_html_e( 'У вас пока нет бронирований.', 'travel' ); ?></p>
+							<?php
+						endif;
+						?>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
     </section>

@@ -22,8 +22,9 @@ function travel_all_posttype(){
         'show_in_menu'       => true,
         'query_var'          => true,
         'rewrite'            => true,
-        
-	    'capability_type' => 'post',
+
+        'capability_type' => array( 'tour', 'tours' ),
+        'map_meta_cap'    => true,
 
         'has_archive'        => true,
         'hierarchical'       => false,
@@ -62,6 +63,39 @@ function travel_all_posttype(){
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-edit-page',
         'supports'           => array('title','thumbnail','comments','custom-fields','page-attributes','post-formats'),
+        'show_in_rest'       => true 
+    ) );
+
+    register_post_type('tour-bookings', array(
+        'labels'             => array(
+            'name'               => 'tour-bookings', // Основное название типа записи
+            'singular_name'      => 'tour-bookings', // отдельное название записи типа Book
+            'add_new'            => 'Добавить новый',
+            'add_new_item'       => 'Добавить новый бронирование',
+            'edit_item'          => 'Редактирывать тур',
+            'new_item'           => 'Новый бронирование',
+            'view_item'          => 'Посмотреть бронирования',
+            'search_items'       => 'Найти бронирование',
+            'not_found'          =>  'бронирований не найдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Бронирования'
+
+          ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+
+        'capability_type' => array( 'tour_booking', 'tour_bookings' ),
+        'map_meta_cap'    => true,
+
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-book-alt',
+        'supports'           => array('title','comments','custom-fields','page-attributes','post-formats'),
         'show_in_rest'       => true 
     ) );
 
@@ -140,6 +174,28 @@ function travel_all_posttype(){
 
 }
 add_action('init', 'travel_all_posttype');
+
+/**
+ * После регистрации CPT выдать администратору все примитивы для tours и tour-bookings.
+ */
+function travel_grant_administrator_cpt_caps() {
+	$role = get_role( 'administrator' );
+	if ( ! $role ) {
+		return;
+	}
+	foreach ( array( 'tours', 'tour-bookings' ) as $post_type ) {
+		$pto = get_post_type_object( $post_type );
+		if ( ! $pto || empty( $pto->cap ) ) {
+			continue;
+		}
+		foreach ( (array) $pto->cap as $cap ) {
+			if ( is_string( $cap ) ) {
+				$role->add_cap( $cap );
+			}
+		}
+	}
+}
+add_action( 'init', 'travel_grant_administrator_cpt_caps', 11 );
 
 // Страница /direction/ — архив всех направлений (родительских термов)
 add_action('init', 'travel_direction_archive_rewrite');
