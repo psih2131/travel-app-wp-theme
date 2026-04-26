@@ -120,43 +120,24 @@ $guide_avatar = get_field( 'foto_gida', 'user_' . $guide_id );
     
                         <?php get_template_part( 'components/user/user-booking-chat' ); ?>
     
-                        <section class="user-booking-review" aria-labelledby="user-booking-review-title">
-                            <h2 id="user-booking-review-title" class="user-booking-review__title">Оставить комментарий</h2>
-                            <form class="user-booking-review__form js-user-booking-review-form" action="#" method="post" novalidate>
-                                <input type="hidden" name="booking_review_rating" value="" class="js-user-booking-review-rating" autocomplete="off" />
-                        
-                                <div class="user-booking-review__field">
-                                    <span class="user-booking-review__label" id="user-booking-review-stars-label">Оценка</span>
-                                    <div
-                                        class="user-booking-review__stars js-user-booking-review-stars"
-                                        data-rating="0"
-                                        role="radiogroup"
-                                        aria-labelledby="user-booking-review-stars-label"
-                                    >
-                                        <button type="button" class="user-booking-review__star js-user-booking-review-star" data-value="1" aria-label="1 из 5 звёзд">★</button>
-                                        <button type="button" class="user-booking-review__star js-user-booking-review-star" data-value="2" aria-label="2 из 5 звёзд">★</button>
-                                        <button type="button" class="user-booking-review__star js-user-booking-review-star" data-value="3" aria-label="3 из 5 звёзд">★</button>
-                                        <button type="button" class="user-booking-review__star js-user-booking-review-star" data-value="4" aria-label="4 из 5 звёзд">★</button>
-                                        <button type="button" class="user-booking-review__star js-user-booking-review-star" data-value="5" aria-label="5 из 5 звёзд">★</button>
-                                    </div>
-                                </div>
-                        
-                                <div class="user-booking-review__field">
-                                    <label for="user-booking-review-text" class="user-booking-review__label">Ваш отзыв</label>
-                                    <textarea
-                                        id="user-booking-review-text"
-                                        name="booking_review_text"
-                                        class="user-booking-review__textarea"
-                                        rows="4"
-                                        placeholder="Расскажите, как прошёл тур и общение с гидом"
-                                        autocomplete="off"
-                                    ></textarea>
-                                </div>
-                        
-                                <p class="user-booking-review__error js-user-booking-review-error" role="alert" hidden></p>
-                                <button type="submit" class="user-booking-review__submit">Отправить отзыв</button>
-                            </form>
-                        </section>
+						<?php
+						$tour_review_param = isset( $_GET['tour_review'] ) ? sanitize_key( (string) wp_unslash( $_GET['tour_review'] ) ) : '';
+						$booking_in_url    = isset( $_GET['booking_id'] ) ? (int) $_GET['booking_id'] : 0;
+						if ( $tour_review_param && (int) $booking_in_url === (int) $booking_id && 'thanks' === $tour_review_param ) {
+							echo '<p class="user-booking-review__status user-booking-review__status--ok" role="status">' . esc_html__( 'Отзыв опубликован. Спасибо!', 'travel' ) . '</p>';
+						}
+						if ( $tour_review_param && (int) $booking_in_url === (int) $booking_id && 'err' === $tour_review_param ) {
+							echo '<p class="user-booking-review__status user-booking-review__status--err" role="alert">' . esc_html__( 'Не удалось отправить отзыв. Проверьте оценку и текст, затем попробуйте снова.', 'travel' ) . '</p>';
+						}
+						get_template_part(
+							'components/user/user-booking-tour-review',
+							null,
+							array(
+								'tour_id'    => (int) $tour_id,
+								'booking_id' => (int) $booking_id,
+							)
+						);
+						?>
 						<?php endif; ?>
                     </article>
                 </div>

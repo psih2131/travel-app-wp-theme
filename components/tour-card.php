@@ -61,7 +61,7 @@ if ( $rubrics && ! is_wp_error( $rubrics ) ) {
 
         <div class="tour-card__body">
             <p class="tour-card__title">
-                <a href="<?php echo esc_url( $link ); ?>" class="tour-card__title-link"><?php echo esc_html( $title ); ?></a>
+                <a href="<?php the_permalink(); ?>" class="tour-card__title-link"><?php echo esc_html( $title ); ?></a>
             </p>
             <p class="tour-card__description"><?php echo esc_html( $description ); ?></p>
         </div>
@@ -72,7 +72,7 @@ if ( $rubrics && ! is_wp_error( $rubrics ) ) {
             <div class="tour-card__price">
                 <?php echo esc_html( $price ?: '' ); ?> / <span>человек</span>
             </div>
-            <a href="<?php echo esc_url( $link ); ?>" class="tour-card__btn">
+            <a href="<?php the_permalink(); ?>" class="tour-card__btn">
                 Забронировать
                 <span class="tour-card__btn-ar">
                     <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">

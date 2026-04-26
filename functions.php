@@ -13,6 +13,10 @@ require_once $url_theme . '/controllers/user-role-controller.php';
 
 // автоодобрение комментов к брони (tour-bookings)
 require_once $url_theme . '/controllers/comment-approve-tour-bookings.php';
+// отзыв к туру со страницы брони (ACF «rejting» + комментарий к tours)
+require_once $url_theme . '/inc/user-booking-tour-review.php';
+// агрегат рейтинга (1–5) для блока отзывов на карточке тура
+require_once $url_theme . '/inc/tour-reviews-rating-stats.php';
 
 // REST API: эндпоинт регистрации пользователя
 require_once $url_theme . '/endpoints/register.php';
